@@ -23,7 +23,7 @@
 #include <comutil.h>
 
 #include <Afxtempl.h>
-#include <typeinfo.h >
+#include <typeinfo>
 #include <assert.h>
 #include <math.h>
 #include "UeChartHeader.h"
