@@ -1,4 +1,11 @@
 #pragma once
+
+// =====================================================
+// StartCADObj - AutoCADå¯¼å‡ºåŠŸèƒ½ï¼ˆå·²ç¦ç”¨ï¼‰
+// åŸå› ï¼šç¼ºå¤±å¤–éƒ¨ä¾èµ– mobject.h, ACAD.h, UeRegEdit.h
+// =====================================================
+
+#ifndef DISABLE_CAD_EXPORT_FEATURE
 #include "mobject.h"
 
 class StartCADObj
@@ -19,18 +26,23 @@ private:
 	void DeleteSupportPath();
 	void AddSupportPath(const CString &strInsPath);
 	CString GetArxFilePath(CString strCADVersion);
-
-	// ¹¦ÄÜ£ºUnicode -> Ansi
-	// ÊäÈë£ºUNICODE×Ö·û´®
-	// Êä³ö£ºÏàÓ¦µÄANSI×Ö·û´®
-	// ±¸×¢£º±¾º¯ÊıÏÂ´Îµ÷ÓÃÊÍ·ÅÉÏ´Îµ÷ÓÃ·ÖÅäµÄÄÚ´æ£¬ÒªÍêÈ«Çå³ıÄÚ´æÇëÊ¹ÓÃConvertUnicodeToAnsi(NULL);
-	//		ÇëÈ·±£µ÷ÓÃ½á¹ûÊ¹ÓÃÍê±Ïºó²ÅÔÙ´Îµ÷ÓÃ±¾º¯Êı¡£
 	char* ConvertUnicodeToAnsi( IN const wchar_t* pwUNICODE );
 
 private:
 	CString m_strTabIndex;
 	CMObject m_ObjAcadApp;
 	CMObject m_ObjAcadDoc;
-	
 };
 
+#else
+// ç¦ç”¨æ—¶æä¾›ç©ºå£³ç±»ï¼Œé˜²æ­¢ç¼–è¯‘é”™è¯¯
+class StartCADObj
+{
+public:
+	StartCADObj(void) {}
+	virtual ~StartCADObj(void) {}
+	void StartUpCAD() {}
+	void SetTabIndex( CString ) {}
+	CString GetTabIndex() { return _T(""); }
+};
+#endif
