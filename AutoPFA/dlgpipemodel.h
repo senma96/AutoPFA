@@ -8,7 +8,7 @@
 //
 #include "Pipe.h"
 #include "BaseDlg.h"
-#include "atlstr.h"
+// #include "atlstr.h"  // 已删除：VC6.0不支持此头文件，CString由MFC提供
 #include "afxwin.h"
 /////////////////////////////////////////////////////////////////////////////
 // DlgPipeModel dialog

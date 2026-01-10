@@ -30,9 +30,13 @@
 #include "DlgUndefinedObjects.h"
 #include "DlgOutPutControl.h"
 #include "ADOConnection.h"
-#include "DlgDataFormatDll.h"
-#include "StartCADObj.h"
+// #include "DlgDataFormatDll.h"  // å·²ï¿½?????ï¿½?ç¼ºå¤±ï¿½????DLL
+// #include "StartCADObj.h"       // å·²ï¿½?????ï¿½?ç¼ºå¤±AutoCAD??ï¿½ï¿½??
 #include "ResourcePathManager.h"
+
+// ï¿½????AutoCADå¯¼ï¿½?ï¿½ï¿½????ï¿½ï¿½????ï¿½ï¿½?????ï¿½???????
+#define DISABLE_CAD_EXPORT_FEATURE
+#define DISABLE_DATA_FORMAT_DLL
 
 //#include "OutPutRef.h"
 
@@ -76,8 +80,8 @@ BEGIN_MESSAGE_MAP(CAutoPFADoc, CDocument)
 	ON_COMMAND(ID_OPTANALYSIS, OnOptanalysis)
 	ON_UPDATE_COMMAND_UI(ID_OPTANALYSIS, OnUpdateOptanalysis)
 	//}}AFX_MSG_MAP
-	ON_COMMAND(ID_OUTPUTCONTROL, &CAutoPFADoc::OnOutPutControl)
-	ON_COMMAND(ID_OUTPUTRESULT, &CAutoPFADoc::OnOutPutResult)
+	ON_COMMAND(ID_OUTPUTCONTROL, OnOutPutControl)   // ï¿½?ï¿½?ï¿½?VC6.0??ï¿½ï¿½?ï¿½ï¿½??ï¿½?
+	ON_COMMAND(ID_OUTPUTRESULT, OnOutPutResult)     // ï¿½?ï¿½?ï¿½?VC6.0??ï¿½ï¿½?ï¿½ï¿½??ï¿½?
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -168,7 +172,7 @@ BOOL CAutoPFADoc::OnSaveDocument(LPCTSTR lpszPathName)
 
 BOOL CAutoPFADoc::Read(LPCTSTR lpszPathName)
 {
-	//ÉèÖÃÓïÑÔÎªÖÐÎÄ,·ñÔòÔÚUnicode±àÂëÏÂ¶Á³öÖÐÎÄ×Ö·ûÎªÂÒÂë
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Unicodeï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Îªï¿½ï¿½ï¿½ï¿½
 	char* old_locale=_strdup( setlocale(LC_CTYPE,NULL) ); 
 	setlocale( LC_CTYPE,"chs");
 
@@ -188,7 +192,7 @@ BOOL CAutoPFADoc::Read(LPCTSTR lpszPathName)
 //	m_OutModel.GetOutPutData().PipeDataOrder();
 //	flagnew = FALSE ;
 //	flagread = TRUE ;
-	setlocale( LC_CTYPE, old_locale ); //»¹Ô­ÓïÑÔÇøÓòµÄÉèÖÃ
+	setlocale( LC_CTYPE, old_locale ); //ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 	return TRUE ;
 }
 
@@ -197,7 +201,7 @@ BOOL CAutoPFADoc::Save(LPCTSTR lpszPathName)
 	BOOL bRet = TRUE;
 	PersistentModel model;
 
-	//ÉèÖÃÓïÑÔÎªÖÐÎÄ,·ñÔòÔÚUnicode±àÂëÏÂÖÐÎÄ×Ö·ûÐ´²»µ½ÎÄ¼þÀïÃæÈ¥¡£
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Unicodeï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½
 	char* old_locale=_strdup( setlocale(LC_CTYPE,NULL) ); 
 	setlocale( LC_CTYPE,"chs");
 	
@@ -215,7 +219,7 @@ BOOL CAutoPFADoc::Save(LPCTSTR lpszPathName)
 		}
 
 
-		setlocale( LC_CTYPE, old_locale ); //»¹Ô­ÓïÑÔÇøÓòµÄÉèÖÃ
+		setlocale( LC_CTYPE, old_locale ); //ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 //		flagnew = FALSE;
 // 	}
 // 	if ( flagnew )
@@ -298,7 +302,7 @@ void CAutoPFADoc::OnUpdateSteadyAnalysis(CCmdUI* pCmdUI)
 void CAutoPFADoc::OnTransanAlysis() 
 {
 	// TODO: Add your command handler code here
-	m_scenarioManager.GetCurScenario()->GetCalcManager()->AnalysisType(0);//»ñµÃµ±Ç°¹¤¿öµÄ¼ÆËã¹ÜÀíÆ÷£¬ÉèÖÃ¼ÆËãÀàÐÍÎª0£¬¼´¼ÆËãË²Ì¬
+	m_scenarioManager.GetCurScenario()->GetCalcManager()->AnalysisType(0);//ï¿½ï¿½Ãµï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²Ì¬
 	m_workSpaceRef.Trans(TRUE);
 
     m_iAnalysisTpye = 1;
@@ -329,7 +333,7 @@ void CAutoPFADoc::OnSystemProper()
 	// TODO: Add your command handler code here
 	DlgSysProperties dlg(*m_pImpulseData,m_unitSystem,m_scenarioManager.GetCurScenario()->GetCompManager()->SysProperty());
 	if(IDOK ==dlg.DoModal())
-	{//ÖØÐÂ¼ÆËã¹ÜµÀ²¨ËÙ
+	{//ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½?
 		m_scenarioManager.GetCurScenario()->GetCompManager()->CalcWave();
 	}
 }
@@ -383,7 +387,7 @@ void CAutoPFADoc::OnExportCalcFile()
 			strDocName = strDocName.Left(index);
 			strDocName = strDocName + _T("_") + pScenario->GetName();
 			
-			static TCHAR BASED_CODE szFilter[] = _T("PFA¼ÆËãÎÄ¼þ(*.calc)|*.calc|All Files (*.*)|*.*||");
+			static TCHAR BASED_CODE szFilter[] = _T("PFAï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½(*.calc)|*.calc|All Files (*.*)|*.*||");
 			CFileDialog dlg(FALSE,_T("calc"),strDocName,OFN_HIDEREADONLY|OFN_OVERWRITEPROMPT,szFilter);
 			if(IDOK == dlg.DoModal())
 			{
@@ -392,7 +396,7 @@ void CAutoPFADoc::OnExportCalcFile()
 		}
 		else
 		{
-			AfxMessageBox(_T("ÇëÏÈ±£´æÎÄ¼þ"));
+			AfxMessageBox(_T("ï¿½ï¿½ï¿½È±ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½"));
 		}
 	}
 }
@@ -401,7 +405,7 @@ void CAutoPFADoc::OnRunModel()
 {
 	// TODO: Add your command handler code here
 
-	if( 3 == m_iAnalysisTpye )          // ¹ÜÍøÓÅ»¯
+	if( 3 == m_iAnalysisTpye )          // ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½
 	{
 		
 		
@@ -431,7 +435,7 @@ void CAutoPFADoc::OnRunModel()
 			
 		}
 
-		OutMutex(TRUE);//¸üÐÂÊä³ö´°¿Ú
+		OutMutex(TRUE);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 	    ActiveView(RUNTIME_CLASS(OutPutDataView));
 		return;
 	}
@@ -451,19 +455,19 @@ void CAutoPFADoc::OnRunModel()
 		int index = strDocName.ReverseFind(_T('.'));
 		if(index == -1)
 		{
-			AfxMessageBox(_T("ÇëÏÈ±£´æÎÄµµ"));
+			AfxMessageBox(_T("ï¿½ï¿½ï¿½È±ï¿½ï¿½ï¿½ï¿½Äµï¿½"));
 			return;
 		}
 		strDocName = strDocName.Left(index);
 		strPath = strDocName;
 		strDocName = strDocName +_T(".imp");
-//		OnSaveDocument(strDocName);//±£´æ»áÓÐ¸ñÊ½²»Ò»ÖÂÎÊÌâ³öÏÖ£¬ËùÒÔÏÈÆÁ±Î
+//		OnSaveDocument(strDocName);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½Ê½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		CalcMOCModel(strPath);
 //		m_OutPutData.PipeDataOrder(_T("12,34,56"));
 //		model.GetScenarioPersist().GetBase()->GetOutputRef().SetPipeDataOrder(m_OutPutData.PipeDataOrder());
 //		CString str;
 //		str=model.GetScenarioPersist().GetBase()->GetOutputRef().PipeDataOrder();
-		OutMutex(TRUE);//¸üÐÂÊä³ö´°¿Ú
+		OutMutex(TRUE);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 
 		ActiveView(RUNTIME_CLASS(OutPutDataView));
 	}
@@ -618,28 +622,34 @@ void CAutoPFADoc::OnUpdateOptanalysis(CCmdUI* pCmdUI)
 }
 
 /************************************************************************
-°æ±¾: 8.0  ×¢ÊÍÊ±¼ä: [2009/4/29]  ×÷Õß: [Zhufy] ÆÀÉóÈË: 
-¹¦ÄÜ:     ¶ÁÈ¡TableFormat.mdbÊý¾Ý¿â£¬¸ù¾Ý±í¸ñÉèÖÃÀïÉèÖÃµÄÏÔÊ¾µÄ×Ö¶ÎË¢ÐÂ½çÃæ                                                         
-ÊäÈë:                                                               
-Êä³ö:                                                              
-< ÐÞ¸ÄÈË >    < Ê±¼ä >     < °æ±¾ >        < ÃèÊö >                                                                               
+ï¿½æ±¾: 8.0  ×¢ï¿½ï¿½Ê±ï¿½ï¿½: [2009/4/29]  ï¿½ï¿½ï¿½ï¿½: [Zhufy] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: 
+ï¿½ï¿½ï¿½ï¿½:     ï¿½ï¿½È¡TableFormat.mdbï¿½ï¿½ï¿½Ý¿â£¬ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ö¶ï¿½Ë¢ï¿½Â½ï¿½ï¿½ï¿½                                                         
+ï¿½ï¿½ï¿½ï¿½:                                                               
+ï¿½ï¿½ï¿½?:                                                              
+< ï¿½Þ¸ï¿½ï¿½ï¿½ >    < Ê±ï¿½ï¿½ >     < ï¿½æ±¾ >        < ï¿½ï¿½ï¿½ï¿½ >                                                                               
 ************************************************************************/
 void CAutoPFADoc::OnOutPutControl()
 {
+#ifdef DISABLE_DATA_FORMAT_DLL
+	// ??ï¿½ï¿½????ï¿½ï¿½?????ï¿½??????ï¿½å·²ï¿½????ï¿½?ç¼ºå¤±ï¿½????DLL: DataFormatDllï¿½?
+	AfxMessageBox(_T("ï¿½???ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½????ï¿½ï¿½????????"));
+	return;
+}
+#else
 	CResourceInstance cr;
 	CDlgDataFormatDll  dlg( _T("AutoPFA") );
 	CString str = ResourcePathManager::Instance().GetOldSoftShareDbPath();;
     if( dlg.DoModal( str.GetBuffer( str.GetLength() ) ) == IDOK )
 	{
-		//¶ÁÈ¡Êý¾Ý¿âÒªÏÔÊ¾Ë¢ÐÂµÄ×Ö¶Î
+		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¿ï¿½Òªï¿½ï¿½Ê¾Ë¢ï¿½Âµï¿½ï¿½Ö¶ï¿½
 		CString strDBPath = str + _T("TableFormat.mdb");
  		ADOConnection pConn;
 		ADORecordSetPtr pRs[4] = { NULL };
 		ADORecordSetPtr pRsTemp;
-		CString strDBName[4] = { _T("tpfaoutPipe") ,      //¹ÜµÀ±í
-			                     _T("tpfaoutJun") ,       //½Úµã±í
-								 _T("tpfaoutTransient") , //Ë²±ä±í
-								 _T("tpfaoutMaxMinTran")  //×î´ó×îÐ¡Ë²±ä±í
+		CString strDBName[4] = { _T("tpfaoutPipe") ,      //ï¿½Üµï¿½ï¿½ï¿½
+			                     _T("tpfaoutJun") ,       //ï¿½Úµï¿½ï¿½?
+								 _T("tpfaoutTransient") , //Ë²ï¿½ï¿½ï¿½?
+								 _T("tpfaoutMaxMinTran")  //ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ë²ï¿½ï¿½ï¿½
 		                       };
 		CString strOrder[4] = { _T("") };
 		CString strUnit[4] = { _T("") };
@@ -653,21 +663,21 @@ void CAutoPFADoc::OnOutPutControl()
 			{
 				CString strSql = _T("");
 				CString strSqlTemp = _T("");
-				//ËùÓÐÏÔÊ¾µÄ×Ö¶Î
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ö¶ï¿½
 				strSql.Format(_T("SELECT Key  FROM [%s]  WHERE NOT ISNULL( CADFieldSeq ) ORDER BY SEQ") , strDBName[i] );
-				//µ¥Î»²»Îª¿ÕµÄ×Ö¶Î
+				//ï¿½ï¿½Î»ï¿½ï¿½Îªï¿½Õµï¿½ï¿½Ö¶ï¿½
 				strSqlTemp.Format(_T("SELECT Key ,UnitSymbol  FROM [%s] , [UNIT_SI_FREQUENT] WHERE  ( [%s].UNITID = [UNIT_SI_FREQUENT].UNITID AND [%s].UnitSEQ = [UNIT_SI_FREQUENT].UnitSEQ ) AND NOT IsNull( [%s].UNITID ) ") ,
 					           strDBName[i] , strDBName[i] , strDBName[i] , strDBName[i] );
 				pRs[i] = pConn.ExecuteSelectSQL( strSql );
 				pRsTemp = pConn.ExecuteSelectSQL( strSqlTemp );
-				//¸ù¾Ý½á¹û¸üÐÂORDER
+				//ï¿½ï¿½ï¿½Ý½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ORDER
 				CString strKey = _T("");
 				CString strUnitTemp = _T("None");
 				while( !pRs[i]->IsEmpty() && !pRs[i]->IsEOF() )
 				{
 					strUnitTemp = _T("None");
 					strKey = pRs[i]->GetString( _T("Key") );
-					strOrder[i] += strKey;//¹Ø¼ü×Ö
+					strOrder[i] += strKey;//ï¿½Ø¼ï¿½ï¿½ï¿½
 					strOrder[i] += _T(",");
 
 					CString strKeyTemp;
@@ -677,7 +687,7 @@ void CAutoPFADoc::OnOutPutControl()
 						strKeyTemp =pRsTemp->GetString( _T("Key") );
 						if ( strKeyTemp == strKey )
 						{
-							strUnitTemp = pRsTemp->GetString( _T("UnitSymbol") );//µ±Ç°µ¥Î»
+							strUnitTemp = pRsTemp->GetString( _T("UnitSymbol") );//ï¿½ï¿½Ç°ï¿½ï¿½Î»
 							break;
 						}
 						pRsTemp->MoveNext();
@@ -690,7 +700,7 @@ void CAutoPFADoc::OnOutPutControl()
 				strOrder[i].TrimRight( _T(",") );
 				strUnit[i].TrimRight( _T(",") );
 			}
-			//¹Ø±ÕÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
 	//		pConn.Close();
 			_ConnectionPtr conTemp;
 			pConn.GetConnectionptr( conTemp );
@@ -715,7 +725,7 @@ void CAutoPFADoc::OnOutPutControl()
 		outMgr.m_OutPutData.MaxMinDataOrder( strOrder[3] );
 		outMgr.m_OutPutData.MaxMinUnitOrder( strUnit[3] );
 
-		//½øÐÐË¢ÐÂ
+		//ï¿½ï¿½ï¿½ï¿½Ë¢ï¿½ï¿½
 		ActiveView(RUNTIME_CLASS(OutPutDataView));
 		CFrameWnd* pFrameWnd=((CFrameWnd*)AfxGetMainWnd())->GetActiveFrame();
 		CView* pView=(pFrameWnd)->GetActiveView();
@@ -738,21 +748,27 @@ void CAutoPFADoc::OnOutPutControl()
 		{
 			return;
 		}
-		//ÖØÏÖ³õÊ¼»¯ÏÔÊ¾ÁÐ±í
+		//ï¿½ï¿½ï¿½Ö³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Ð±ï¿½
 		pOutPutView->m_PipeView.LoadData( m_scenarioManager.GetCurScenario(), m_OutModel, &m_unitSystem );
 		pOutPutView->m_JunView.LoadData( m_scenarioManager.GetCurScenario(), m_OutModel, &m_unitSystem );
 	}
 }
+#endif  // !DISABLE_DATA_FORMAT_DLL
 
 void CAutoPFADoc::OnOutPutResult()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+#ifdef DISABLE_CAD_EXPORT_FEATURE
+	// AutoCADï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ½ï¿½ï¿½ï¿½
+	AfxMessageBox(_T("AutoCADï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½"));
+#else
+	// TODO: ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î´¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 	SetPFApipe();
-	//ÕâÀïÏÈ°Ñ³ö±í¸ñµÄÐ´ËÀ£¬ÒÔºóÒª´ÓÐ´Êý¾Ý¿âÄÇÀï¶¯Ì¬»ñÈ¡¡£
+	//ï¿½ï¿½ï¿½ï¿½ï¿½È°Ñ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½?ï¿½ï¿½Ð´ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¶¯Ì¬ï¿½ï¿½È¡ï¿½ï¿½
 	CString TabIndex = _T( "202 203 204 205" );
 	StartCADObj temp;
 	temp.SetTabIndex(TabIndex);
 	temp.StartUpCAD();
+#endif
 }
 
 

@@ -8,9 +8,12 @@
 #include "MainFrm.h"
 #include "ChildFrm.h"
 #include "ADOConnection.h"
-#include "GetPropertyofMaterial2.h"
+// #include "GetPropertyofMaterial2.h"  // 已禁用：缺失外部库
 #include "Fuild.h"
 #include "ResourcePathManager.h"
+
+// 禁用材料属性功能的标记
+#define DISABLE_MATERIAL_PROPERTY_FEATURE
 
 
 #ifdef _DEBUG
@@ -123,7 +126,9 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // DlgPipeModel message handlers
 
+#ifndef DISABLE_MATERIAL_PROPERTY_FEATURE
 GetPropertyofMaterial material;
+#endif
 
 void DlgPipeModel::Init()
 {
@@ -310,6 +315,7 @@ void DlgPipeModel::OnSelchangeMatirail()
 	UpdateData(TRUE);
 	if (m_bCalcWave == 1)
 	{
+#ifndef DISABLE_MATERIAL_PROPERTY_FEATURE
 		ADOConnection m_ado;
 		CString strFile,strsql,materialname;
 		Fuild *fluid;
@@ -321,7 +327,7 @@ void DlgPipeModel::OnSelchangeMatirail()
 			return ;
 		strFile.TrimRight( _T( "\\" ) );
 		strFile += _T("\\Material.mdb");
-		//str = "E:\\AutoPDMS2.0\\�����ĵ�\\���ݿ�ģ��\\Material.mdb";
+		//str = "E:\\AutoPDMS2.0\\�����ĵ�\\���ݿ�ģ��\\Material.mdb";
 		m_ado.Open(strFile);
 		m_ado.GetConnectionptr( material.m_pMaterialCon );
 		fluid = m_manager.SysProperty().GetFuild();
@@ -337,6 +343,11 @@ void DlgPipeModel::OnSelchangeMatirail()
 		m_strPossionRatio.Format(_T("%f"),fPoissons);
 		m_strElasticity.Format(_T("%f"),Et);
 		m_strElasticityUnit = _T("MPa");
+#else
+		// 材料属性功能已禁用
+		AfxMessageBox(_T("材料属性查询功能未启用"));
+		return;
+#endif
 	}
 	else
 		return;
@@ -346,7 +357,7 @@ void DlgPipeModel::OnSelchangeMatirail()
 BOOL DlgPipeModel::PreTranslateMessage(MSG* pMsg) 
 {
 	// TODO: Add your specialized code here and/or call the base class
-	//���ζԻ���ġ���ESC��Enter���˳�"
+	//���ζԻ���ġ���ESC��Enter���˳�"
 	if(WM_KEYDOWN ==	pMsg->message)
 	{
 		int nKey = (int) pMsg->wParam;
