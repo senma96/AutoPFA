@@ -1,5 +1,12 @@
 #include "stdafx.h"
 #include "StartCADObj.h"
+
+// =====================================================
+// StartCADObj å®ç°ï¼ˆå·²ç¦ç”¨ï¼‰
+// åŸå› ï¼šç¼ºå¤±å¤–éƒ¨ä¾èµ– UeRegEdit.h, ACAD.h, mobject.h
+// =====================================================
+
+#ifndef DISABLE_CAD_EXPORT_FEATURE
 #include "UeRegEdit.h"
 #include "ACAD.h"
 IAcadApplication m_ObjAcadApp1 = NULL;
@@ -44,11 +51,11 @@ void StartCADObj::StartUpCAD()
 
 	m_strStartVersion = m_ObjAcadApp1.GetVersion();
 
-	//04ÒÔÏÂ°æ±¾²»ÄÜÓÃ
+	//04ï¿½ï¿½ï¿½Â°æ±¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	CString strCmp = _T("16");
 	if( m_strStartVersion < strCmp )
 	{
-		AfxMessageBox(_T("ÇëÑ¡ÔñÆô¶¯µÄ°æ±¾£¡"));
+		AfxMessageBox(_T("ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°æ±¾ï¿½ï¿½"));
 		return;
 	}
 	else
@@ -100,12 +107,12 @@ void StartCADObj::StartUpCAD()
 		
 //		LPDISPATCH pDisp;	
 		IAcadDocument acadDoc;
-		// »ñµÃµ±Ç°ÎÄµµºÍÄ£ĞÍ¿Õ¼ä
+		// ï¿½ï¿½Ãµï¿½Ç°ï¿½Äµï¿½ï¿½ï¿½Ä£ï¿½Í¿Õ¼ï¿½
 		pDisp = m_ObjAcadApp1.GetActiveDocument();
 		acadDoc.AttachDispatch(pDisp);
 		acadDoc.SendCommand( _T( "Drawpfatbl\n" ) );
 
-		//»¹Ô­
+		//ï¿½ï¿½Ô­
 		IPrefers;
 		pDisp=m_ObjAcadApp1.GetPreferences();
 		IPrefers.AttachDispatch(pDisp); 	
@@ -128,17 +135,17 @@ void StartCADObj::StartUpCAD()
 // 	AfxGetApp()->BeginWaitCursor();
 // 	if(FAILED(m_ObjAcadApp.GetActiveObject(_T("AutoCAD.Application"))))
 // 	{
-// 		//Ã»ÓĞµÃµ½¶ÔÏó
+// 		//Ã»ï¿½ĞµÃµï¿½ï¿½ï¿½ï¿½ï¿½
 // 		if(FAILED(m_ObjAcadApp.CreateObject(_T("AutoCAD.Application"))))
 // 		{
-// 			AfxMessageBox( _T( "²»ÄÜÆô¶¯CAD" ) );
+// 			AfxMessageBox( _T( "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CAD" ) );
 // 
 // 			return;
 // 		}
 // 	}
 // 	else
 // 	{
-// 		//µÃµ½¶ÔÏó
+// 		//ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½
 // 		bGetApp=TRUE;
 // 	}
 // 	BOOL bACADR14=FALSE;
@@ -161,7 +168,7 @@ void StartCADObj::StartUpCAD()
 // 	}
 // 	else
 // 	{
-// 		AfxMessageBox( _T( "Æô¶¯µÄCAD²»Ö§³Ö¸Ã²Ù×÷£¡" ) );
+// 		AfxMessageBox( _T( "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CADï¿½ï¿½Ö§ï¿½Ö¸Ã²ï¿½ï¿½ï¿½ï¿½ï¿½" ) );
 // 		return;
 // 	}
 // 
@@ -228,12 +235,12 @@ CString StartCADObj::GetTabIndex()
 
 CString StartCADObj::GetArxFilePath(CString strCADVersion)
 {
-	UeRegEdit reg( _T( "SOFTWARE\\³¤É³ÓÅÒ×Èí¼ş¿ª·¢ÓĞÏŞ¹«Ë¾\\" ) );
+	UeRegEdit reg( _T( "SOFTWARE\\ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¹ï¿½Ë¾\\" ) );
 	CString strSubKey = _T( "AutoPFA" );
 
 	CString strVerInfo = _T( "" );
 
-	//»ñµÃAutoPFAµÄ°²×°Â·¾¶
+	//ï¿½ï¿½ï¿½AutoPFAï¿½Ä°ï¿½×°Â·ï¿½ï¿½
 	strVerInfo = reg.GetRegKey( strSubKey,_T( "AutoPFA_Version" ),strVerInfo );
 	if( strVerInfo.IsEmpty() )
 	{
@@ -339,7 +346,7 @@ void StartCADObj::DeleteSupportPath()
 	CString strPath;
 	CString strLeft;
 	CString strRight;
-	CString strInsPath = _T("³¤É³ÓÅÒ×Èí¼ş");
+	CString strInsPath = _T("ï¿½ï¿½É³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	CMObject ObjAcadApp;
 	if(SUCCEEDED(ObjAcadApp.GetActiveObject(_T("AutoCAD.Application"))))
 	{	
@@ -350,7 +357,7 @@ void StartCADObj::DeleteSupportPath()
 
 
 		_variant_t varAllPah;
-		varAllPah = ObjAcadAppPreferencesFiles.GetPropertyByName( _T("SupportPath") );  //»ñµÃSupportPathËÑË÷Â·¾¶
+		varAllPah = ObjAcadAppPreferencesFiles.GetPropertyByName( _T("SupportPath") );  //ï¿½ï¿½ï¿½SupportPathï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 
 		CString strAllPath = varAllPah.bstrVal;
 		strInsPath.MakeUpper();
@@ -387,11 +394,11 @@ void StartCADObj::DeleteSupportPath()
 	}
 }
 
-// ¹¦ÄÜ£ºUnicode -> Ansi
-// ÊäÈë£ºUNICODE×Ö·û´®
-// Êä³ö£ºÏàÓ¦µÄANSI×Ö·û´®
-// ±¸×¢£º±¾º¯ÊıÏÂ´Îµ÷ÓÃÊÍ·ÅÉÏ´Îµ÷ÓÃ·ÖÅäµÄÄÚ´æ£¬ÒªÍêÈ«Çå³ıÄÚ´æÇëÊ¹ÓÃConvertUnicodeToAnsi(NULL);
-//		ÇëÈ·±£µ÷ÓÃ½á¹ûÊ¹ÓÃÍê±Ïºó²ÅÔÙ´Îµ÷ÓÃ±¾º¯Êı¡£
+// ï¿½ï¿½ï¿½Ü£ï¿½Unicode -> Ansi
+// ï¿½ï¿½ï¿½ë£ºUNICODEï¿½Ö·ï¿½ï¿½ï¿½
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ANSIï¿½Ö·ï¿½ï¿½ï¿½
+// ï¿½ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â´Îµï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½Ï´Îµï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½Ú´æ£¬Òªï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ConvertUnicodeToAnsi(NULL);
+//		ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½Ã½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ïºï¿½ï¿½ï¿½Ù´Îµï¿½ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 char* StartCADObj::ConvertUnicodeToAnsi( IN const wchar_t* pwUNICODE )
 {
 	static char* s_pChar = NULL;
@@ -422,12 +429,12 @@ void StartCADObj::AddSupportPath(const CString &strInsPath)
 
 
 	_variant_t varAllPah;
-	varAllPah = m_ObjAcadAppPreferencesFiles.GetPropertyByName( _T("SupportPath") );  //»ñµÃSupportPathËÑË÷Â·¾¶
+	varAllPah = m_ObjAcadAppPreferencesFiles.GetPropertyByName( _T("SupportPath") );  //ï¿½ï¿½ï¿½SupportPathï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 
 	CString strAllPath = varAllPah.bstrVal;
-	if( strAllPath.Find( strInsPath ) == -1 )  //ÅĞ¶ÏÊÇ·ñÒÑ¾­Ìí¼Ó
+	if( strAllPath.Find( strInsPath ) == -1 )  //ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
 	{	
-		//	//Find ²Ù×÷Ê§°Ü       
+		//	//Find ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½       
 		if( strAllPath.Right( 1 ) != _T(";"))
 			strAllPath += _T(";");
 		strAllPath += strInsPath;
@@ -491,4 +498,6 @@ bool  vtob(	VARIANT &v)
 	}
 	return false;
 }
+
+#endif  // !DISABLE_CAD_EXPORT_FEATURE
 
