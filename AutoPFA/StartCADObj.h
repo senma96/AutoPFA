@@ -5,6 +5,11 @@
 // 原因：缺失外部依赖 mobject.h, ACAD.h, UeRegEdit.h
 // =====================================================
 
+// 强制禁用CAD功能（缺失依赖文件）
+#ifndef DISABLE_CAD_EXPORT_FEATURE
+#define DISABLE_CAD_EXPORT_FEATURE
+#endif
+
 #ifndef DISABLE_CAD_EXPORT_FEATURE
 #include "mobject.h"
 
@@ -12,10 +17,8 @@ class StartCADObj
 {
 public:
 	StartCADObj(void);
-public:
 	virtual ~StartCADObj(void);
 
-public:
 	void StartUpCAD();
 	void SetTabIndex( CString tablIndex );
 	CString GetTabIndex();
