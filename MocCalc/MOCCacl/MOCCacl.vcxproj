@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{691392A9-7859-4DF5-B6E9-2F5E388A47C3}</ProjectGuid>
+    <RootNamespace>MOCCacl</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/MocCalc", URVBAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/MOCCacl.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/MOCCacl.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>APQuantity10d.lib;CalcDriverd.lib;PFAResultd.lib;AFTDriverd.lib;Persistentd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Libd\MOCCacld.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>D:\pfalib\Libd/MOCCacld.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Libd/MOCCacld.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/MOCCacl.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/MOCCacl.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/MOCCacl.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>APQuantity10.lib;CalcDriver.lib;PFAResult.lib;AFTDriver.lib;Persistent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/MOCCacl.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/MOCCacl.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Lib/MOCCacl.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/MOCCacl.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\BrachJunStrategy.cpp" />
+    <ClCompile Include="..\src\BreckerStrategy.cpp" />
+    <ClCompile Include="..\src\CalcFriction.cpp" />
+    <ClCompile Include="..\src\CalcTeeWyeLoss.cpp" />
+    <ClCompile Include="..\src\dlgSolveControl.cpp" />
+    <ClCompile Include="..\src\EndInfo.cpp" />
+    <ClCompile Include="..\src\EndListRef.cpp" />
+    <ClCompile Include="..\src\FlowJunStrategy.cpp" />
+    <ClCompile Include="..\src\FourQundrantModel.cpp" />
+    <ClCompile Include="..\src\GasAccumStrategy.cpp" />
+    <ClCompile Include="..\src\GasProperty.cpp" />
+    <ClCompile Include="..\src\LiquidAccumStrategy.cpp" />
+    <ClCompile Include="..\src\LocalRStrategy.cpp" />
+    <ClCompile Include="..\src\MOCAreaChange.cpp" />
+    <ClCompile Include="..\src\MOCAssignFlow.cpp" />
+    <ClCompile Include="..\src\MOCAssignPress.cpp" />
+    <ClCompile Include="..\src\MOCBend.cpp" />
+    <ClCompile Include="..\src\MOCBrach.cpp" />
+    <ClCompile Include="..\src\MOCBrecker.cpp" />
+    <ClCompile Include="..\src\MOCCalcMgr.cpp" />
+    <ClCompile Include="..\src\MOCCalcModel.cpp" />
+    <ClCompile Include="..\src\MOCCheck.cpp" />
+    <ClCompile Include="..\src\MOCComponent.cpp" />
+    <ClCompile Include="..\src\MOCComponentMgr.cpp" />
+    <ClCompile Include="..\src\MOCControl.cpp" />
+    <ClCompile Include="..\src\MOCDeadEnd.cpp" />
+    <ClCompile Include="..\src\MOCFluid.cpp" />
+    <ClCompile Include="..\src\MOCFourQuadrantData.cpp" />
+    <ClCompile Include="..\src\MOCGasAccum.cpp" />
+    <ClCompile Include="..\src\MOCGeneral.cpp" />
+    <ClCompile Include="..\src\MOCJun.cpp" />
+    <ClCompile Include="..\src\MOCJunControl.cpp" />
+    <ClCompile Include="..\src\MOCJunFactory.cpp" />
+    <ClCompile Include="..\src\MOCJunMgr.cpp" />
+    <ClCompile Include="..\src\MOCLiquidAccum.cpp" />
+    <ClCompile Include="..\src\MOCLumpedInertia.cpp" />
+    <ClCompile Include="..\src\MOCPeriodic.cpp" />
+    <ClCompile Include="..\src\MOCPipe.cpp" />
+    <ClCompile Include="..\src\MOCPipeMgr.cpp" />
+    <ClCompile Include="..\src\MOCPolynomial.cpp" />
+    <ClCompile Include="..\src\MOCPump.cpp" />
+    <ClCompile Include="..\src\MOCPumpConfig.cpp" />
+    <ClCompile Include="..\src\MOCPumpInertia.cpp" />
+    <ClCompile Include="..\src\MOCPumpModel.cpp" />
+    <ClCompile Include="..\src\MOCRelief.cpp" />
+    <ClCompile Include="..\src\MOCReservior.cpp" />
+    <ClCompile Include="..\src\MOCSpray.cpp" />
+    <ClCompile Include="..\src\MOCStation.cpp" />
+    <ClCompile Include="..\src\MOCStationMgr.cpp" />
+    <ClCompile Include="..\src\MOCSteady.cpp" />
+    <ClCompile Include="..\src\MOCSurge.cpp" />
+    <ClCompile Include="..\src\MOCTeeWye.cpp" />
+    <ClCompile Include="..\src\MOCTranData.cpp" />
+    <ClCompile Include="..\src\MOCTrans.cpp" />
+    <ClCompile Include="..\src\MOCTransOutControl.cpp" />
+    <ClCompile Include="..\src\MOCTriger.cpp" />
+    <ClCompile Include="..\src\MOCTrigerAbsTimeStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerCheckStateStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerControlStateStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerJunEGLDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerJunHGLDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerJunStagDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerJunStagStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerJunStaticDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerMgr.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeEGLDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeEGLStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeHGLDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeHGLStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeMassStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeStagDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeStagStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeStaticDiffStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeVelStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerPipeVolumeStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerReliefStateStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerRelTimeStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerSpeedStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerSpryVolumeStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerStrategyFactory.cpp" />
+    <ClCompile Include="..\src\MOCTrigerStrategyMgr.cpp" />
+    <ClCompile Include="..\src\MOCTrigerSurgeGLStrategy.cpp" />
+    <ClCompile Include="..\src\MOCTrigerSurgeLiquidHStrategy.cpp" />
+    <ClCompile Include="..\src\MOCValve.cpp" />
+    <ClCompile Include="..\src\NoTranFourQundrant.cpp" />
+    <ClCompile Include="..\src\PressDropStrategy.cpp" />
+    <ClCompile Include="..\src\PressJunStrategy.cpp" />
+    <ClCompile Include="..\src\PumpTransModelMgr.cpp" />
+    <ClCompile Include="..\src\StartFourQundrant.cpp" />
+    <ClCompile Include="..\src\StartWhitInertia.cpp" />
+    <ClCompile Include="..\src\SurgeStrategy.cpp" />
+    <ClCompile Include="..\src\TripFourQundrant.cpp" />
+    <ClCompile Include="..\src\TripWhitInertia.cpp" />
+    <ClCompile Include="..\src\WhitoutInertia.cpp" />
+    <ClCompile Include="..\src\WhitoutInertiaFourQundrant.cpp" />
+    <ClCompile Include="MOCCacl.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MOCCacl.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\BrachJunStrategy.h" />
+    <ClInclude Include="..\inc\BreckerStrategy.h" />
+    <ClInclude Include="..\inc\CalcFriction.h" />
+    <ClInclude Include="..\inc\CalcTeeWyeLoss.h" />
+    <ClInclude Include="..\inc\dlgSolveControl.h" />
+    <ClInclude Include="..\inc\EndInfo.h" />
+    <ClInclude Include="..\inc\EndListRef.h" />
+    <ClInclude Include="..\inc\FlowJunStrategy.h" />
+    <ClInclude Include="..\inc\FourQundrantModel.h" />
+    <ClInclude Include="..\inc\GasAccumStrategy.h" />
+    <ClInclude Include="..\inc\GasProperty.h" />
+    <ClInclude Include="..\inc\LiquidAccumStrategy.h" />
+    <ClInclude Include="..\inc\LocalRStrategy.h" />
+    <ClInclude Include="..\inc\MOCAreaChange.h" />
+    <ClInclude Include="..\inc\MOCAssignFlow.h" />
+    <ClInclude Include="..\inc\MOCAssignPress.h" />
+    <ClInclude Include="..\inc\MOCBend.h" />
+    <ClInclude Include="..\inc\MOCBrach.h" />
+    <ClInclude Include="..\inc\MOCBrecker.h" />
+    <ClInclude Include="..\inc\MOCCalcMgr.h" />
+    <ClInclude Include="..\inc\MOCCalcModel.h" />
+    <ClInclude Include="..\inc\MOCCheck.h" />
+    <ClInclude Include="..\inc\MOCComponent.h" />
+    <ClInclude Include="..\inc\MOCComponentMgr.h" />
+    <ClInclude Include="..\inc\MOCControl.h" />
+    <ClInclude Include="..\inc\MOCDeadEnd.h" />
+    <ClInclude Include="..\inc\MOCFluid.h" />
+    <ClInclude Include="..\inc\MOCFourQuadrantData.h" />
+    <ClInclude Include="..\inc\MOCGasAccum.h" />
+    <ClInclude Include="..\inc\MOCGeneral.h" />
+    <ClInclude Include="..\inc\MOCJun.h" />
+    <ClInclude Include="..\inc\MOCJunControl.h" />
+    <ClInclude Include="..\inc\MOCJunFactory.h" />
+    <ClInclude Include="..\inc\MOCJunMgr.h" />
+    <ClInclude Include="..\inc\MOCLiquidAccum.h" />
+    <ClInclude Include="..\inc\MOCLumpedInertia.h" />
+    <ClInclude Include="..\inc\MOCPeriodic.h" />
+    <ClInclude Include="..\inc\MOCPipe.h" />
+    <ClInclude Include="..\inc\MOCPipeMgr.h" />
+    <ClInclude Include="..\inc\MOCPolynomial.h" />
+    <ClInclude Include="..\inc\MOCPump.h" />
+    <ClInclude Include="..\inc\MOCPumpConfig.h" />
+    <ClInclude Include="..\inc\MOCPumpInertia.h" />
+    <ClInclude Include="..\inc\MOCPumpModel.h" />
+    <ClInclude Include="..\inc\MOCRelief.h" />
+    <ClInclude Include="..\inc\MOCReservior.h" />
+    <ClInclude Include="..\inc\MOCSpray.h" />
+    <ClInclude Include="..\inc\MOCStation.h" />
+    <ClInclude Include="..\inc\MOCStationMgr.h" />
+    <ClInclude Include="..\inc\MOCSteady.h" />
+    <ClInclude Include="..\inc\MOCSurge.h" />
+    <ClInclude Include="..\inc\MOCTable.h" />
+    <ClInclude Include="..\inc\MOCTeeWye.h" />
+    <ClInclude Include="..\inc\MOCTranData.h" />
+    <ClInclude Include="..\inc\MOCTrans.h" />
+    <ClInclude Include="..\inc\MOCTransOutControl.h" />
+    <ClInclude Include="..\inc\MOCTriger.h" />
+    <ClInclude Include="..\inc\MOCTrigerAbsTimeStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerCheckStateStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerControlStateStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerJunEGLDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerJunHGLDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerJunStagDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerJunStagStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerJunStaticDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerMgr.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeEGLDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeEGLStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeHGLDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeHGLStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeMassStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeStagDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeStagStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeStaticDiffStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeVelStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerPipeVolumeStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerReliefStateStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerRelTimeStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerSpeedStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerSpryVolumeStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerStrategyFactory.h" />
+    <ClInclude Include="..\inc\MOCTrigerStrategyMgr.h" />
+    <ClInclude Include="..\inc\MOCTrigerSurgeGLStrategy.h" />
+    <ClInclude Include="..\inc\MOCTrigerSurgeLiquidHStrategy.h" />
+    <ClInclude Include="..\inc\MOCValve.h" />
+    <ClInclude Include="..\inc\NoTranFourQundrant.h" />
+    <ClInclude Include="..\inc\PressDropStrategy.h" />
+    <ClInclude Include="..\inc\PressJunStrategy.h" />
+    <ClInclude Include="..\inc\PumpTransModelMgr.h" />
+    <ClInclude Include="..\inc\StartFourQundrant.h" />
+    <ClInclude Include="..\inc\StartWhitInertia.h" />
+    <ClInclude Include="..\inc\SurgeStrategy.h" />
+    <ClInclude Include="..\inc\TripFourQundrant.h" />
+    <ClInclude Include="..\inc\TripWhitInertia.h" />
+    <ClInclude Include="..\inc\WhitoutInertia.h" />
+    <ClInclude Include="..\inc\WhitoutInertiaFourQundrant.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MOCCacl.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MOCCacl.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

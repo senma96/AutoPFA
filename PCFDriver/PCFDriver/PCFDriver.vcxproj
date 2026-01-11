@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{7E2ACBC7-E80D-43B8-955A-35D729AB0CD0}</ProjectGuid>
+    <RootNamespace>PCFDriver</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/PCFDriver", BVBCAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/PCFDriver.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/PCFDriver.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>acge17.lib;AFTDriver.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/PCFDriver.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/PCFDriver.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Lib/PCFDriver.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/PCFDriver.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/PCFDriver.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/PCFDriver.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>acge17.lib;AFTDriverd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Libd\PCFDriverd.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>D:\pfalib\Libd/PCFDriverd.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <StackCommitSize>16777215</StackCommitSize>
+      <ImportLibrary>D:\pfalib\Libd/PCFDriverd.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/PCFDriver.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\FCFComponentMgr.cpp" />
+    <ClCompile Include="..\src\PCFAssignFlow.cpp" />
+    <ClCompile Include="..\src\PCFAssignPress.cpp" />
+    <ClCompile Include="..\src\PCFBend.cpp" />
+    <ClCompile Include="..\src\PCFCap.cpp" />
+    <ClCompile Include="..\src\PCFCoupling.cpp" />
+    <ClCompile Include="..\src\PCFCross.cpp" />
+    <ClCompile Include="..\src\PCFDriverModel.cpp" />
+    <ClCompile Include="..\src\PCFElbow.cpp" />
+    <ClCompile Include="..\src\PCFFBlind.cpp" />
+    <ClCompile Include="..\src\PCFFilter.cpp" />
+    <ClCompile Include="..\src\PCFFlange.cpp" />
+    <ClCompile Include="..\src\PCFGasAccum.cpp" />
+    <ClCompile Include="..\src\PCFGasket.cpp" />
+    <ClCompile Include="..\src\PCFInstrument.cpp" />
+    <ClCompile Include="..\src\PCFJun.cpp" />
+    <ClCompile Include="..\src\PCFJunFactory.cpp" />
+    <ClCompile Include="..\src\PCFJunsMgr.cpp" />
+    <ClCompile Include="..\src\PCFLiquidAccum.cpp" />
+    <ClCompile Include="..\src\PCFLJSE.cpp" />
+    <ClCompile Include="..\src\PCFPipe.cpp" />
+    <ClCompile Include="..\src\PCFPipesMgr.cpp" />
+    <ClCompile Include="..\src\PCFPortPoint.cpp" />
+    <ClCompile Include="..\src\PCFPumpConfig.cpp" />
+    <ClCompile Include="..\src\PCFPumpConfigData.cpp" />
+    <ClCompile Include="..\src\PCFPumpData.cpp" />
+    <ClCompile Include="..\src\PCFReduce.cpp" />
+    <ClCompile Include="..\src\PCFReservior.cpp" />
+    <ClCompile Include="..\src\PCFSetOnTee.cpp" />
+    <ClCompile Include="..\src\PCFSpray.cpp" />
+    <ClCompile Include="..\src\PCFSupport.cpp" />
+    <ClCompile Include="..\src\PCFSurge.cpp" />
+    <ClCompile Include="..\src\PCFTee.cpp" />
+    <ClCompile Include="..\src\PCFTrap.cpp" />
+    <ClCompile Include="..\src\PCFValve.cpp" />
+    <ClCompile Include="..\src\PCFWeld.cpp" />
+    <ClCompile Include="..\src\PipeLineHead.cpp" />
+    <ClCompile Include="..\src\ProjectionInfo.cpp" />
+    <ClCompile Include="..\src\SetCompKeyPt.cpp" />
+    <ClCompile Include="..\src\UnitInfo.cpp" />
+    <ClCompile Include="PCFDriver.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PCFDriver.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\FCFComponentMgr.h" />
+    <ClInclude Include="..\inc\PCFAssignFlow.h" />
+    <ClInclude Include="..\inc\PCFAssignPress.h" />
+    <ClInclude Include="..\inc\PCFBend.h" />
+    <ClInclude Include="..\inc\PCFCap.h" />
+    <ClInclude Include="..\inc\PCFCoupling.h" />
+    <ClInclude Include="..\inc\PCFCross.h" />
+    <ClInclude Include="..\inc\PCFDriverModel.h" />
+    <ClInclude Include="..\inc\PCFElbow.h" />
+    <ClInclude Include="..\inc\PCFFBlind.h" />
+    <ClInclude Include="..\inc\PCFFilter.h" />
+    <ClInclude Include="..\inc\PCFFlange.h" />
+    <ClInclude Include="..\inc\PCFGasAccum.h" />
+    <ClInclude Include="..\inc\PCFGasket.h" />
+    <ClInclude Include="..\inc\PCFInstrument.h" />
+    <ClInclude Include="..\inc\PCFJun.h" />
+    <ClInclude Include="..\inc\PCFJunFactory.h" />
+    <ClInclude Include="..\inc\PCFJunsMgr.h" />
+    <ClInclude Include="..\inc\PCFLiquidAccum.h" />
+    <ClInclude Include="..\inc\PCFLJSE.h" />
+    <ClInclude Include="..\inc\PCFPipe.h" />
+    <ClInclude Include="..\inc\PCFPipesMgr.h" />
+    <ClInclude Include="..\inc\PCFPortPoint.h" />
+    <ClInclude Include="..\inc\PCFPumpConfig.h" />
+    <ClInclude Include="..\inc\PCFPumpConfigData.h" />
+    <ClInclude Include="..\inc\PCFPumpData.h" />
+    <ClInclude Include="..\inc\PCFReduce.h" />
+    <ClInclude Include="..\inc\PCFReservior.h" />
+    <ClInclude Include="..\inc\PCFSetOnTee.h" />
+    <ClInclude Include="..\inc\PCFSpray.h" />
+    <ClInclude Include="..\inc\PCFSupport.h" />
+    <ClInclude Include="..\inc\PCFSurge.h" />
+    <ClInclude Include="..\inc\PCFTee.h" />
+    <ClInclude Include="..\inc\PCFTrap.h" />
+    <ClInclude Include="..\inc\PCFValve.h" />
+    <ClInclude Include="..\inc\PCFWeld.h" />
+    <ClInclude Include="..\inc\PipeLineHead.h" />
+    <ClInclude Include="..\inc\ProjectionInfo.h" />
+    <ClInclude Include="..\inc\SetCompKeyPt.h" />
+    <ClInclude Include="..\inc\UnitInfo.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PCFDriver.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{69B0A96A-87F1-464F-BEBC-C743E8C9A3D7}</ProjectGuid>
+    <RootNamespace>PFAResult</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/PFAResult", QBWBAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/PFAResult.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/PFAResult.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>UnitSystem.lib;AFTDriver.lib;Persistent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/PFAResult.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/PFAResult.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Lib/PFAResult.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/PFAResult.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/PFAResult.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/PFAResult.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>UnitSystemd.lib;AFTDriverd.lib;Persistentd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Libd\PFAResultd.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>D:\pfalib\Libd/PFAResultd.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Libd/PFAResultd.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/PFAResult.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ComponentStmOut.cpp" />
+    <ClCompile Include="..\src\ComponentStmOutMgr.cpp" />
+    <ClCompile Include="..\src\ComponentTranOut.cpp" />
+    <ClCompile Include="..\src\ComponentTranOutMgr.cpp" />
+    <ClCompile Include="..\src\JunOut.cpp" />
+    <ClCompile Include="..\src\JunOutShow.cpp" />
+    <ClCompile Include="..\src\JunStmOut.cpp" />
+    <ClCompile Include="..\src\JunStmOutMgr.cpp" />
+    <ClCompile Include="..\src\JunTranOut.cpp" />
+    <ClCompile Include="..\src\JunTranOutMgr.cpp" />
+    <ClCompile Include="..\src\OutDataAttr.cpp" />
+    <ClCompile Include="..\src\OutMgr.cpp" />
+    <ClCompile Include="..\src\OutPutSystem.cpp" />
+    <ClCompile Include="..\src\PFAOutModel.cpp" />
+    <ClCompile Include="..\src\PipeOutShow.cpp" />
+    <ClCompile Include="..\src\PipeStmOut.cpp" />
+    <ClCompile Include="..\src\PipeStmOutMgr.cpp" />
+    <ClCompile Include="..\src\PipeTranOut.cpp" />
+    <ClCompile Include="..\src\PipeTranOutMgr.cpp" />
+    <ClCompile Include="..\src\StationOut.cpp" />
+    <ClCompile Include="..\src\StationStmOut.cpp" />
+    <ClCompile Include="..\src\SteadyOutModel.cpp" />
+    <ClCompile Include="..\src\StmOutMgr.cpp" />
+    <ClCompile Include="..\src\TranOutMgr.cpp" />
+    <ClCompile Include="..\src\TransOutModel.cpp" />
+    <ClCompile Include="PFAResult.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PFAResult.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\ComponentStmOut.h" />
+    <ClInclude Include="..\inc\ComponentStmOutMgr.h" />
+    <ClInclude Include="..\inc\ComponentTranOut.h" />
+    <ClInclude Include="..\inc\ComponentTranOutMgr.h" />
+    <ClInclude Include="..\inc\JunOut.h" />
+    <ClInclude Include="..\inc\JunOutShow.h" />
+    <ClInclude Include="..\inc\JunStmOut.h" />
+    <ClInclude Include="..\inc\JunStmOutMgr.h" />
+    <ClInclude Include="..\inc\JunTranOut.h" />
+    <ClInclude Include="..\inc\JunTranOutMgr.h" />
+    <ClInclude Include="..\inc\OutDataAttr.h" />
+    <ClInclude Include="..\inc\OutMgr.h" />
+    <ClInclude Include="..\inc\OutPutSystem.h" />
+    <ClInclude Include="..\inc\PFAOutModel.h" />
+    <ClInclude Include="..\inc\PipeOutShow.h" />
+    <ClInclude Include="..\inc\PipeStmOut.h" />
+    <ClInclude Include="..\inc\PipeStmOutMgr.h" />
+    <ClInclude Include="..\inc\PipeTranOut.h" />
+    <ClInclude Include="..\inc\PipeTranOutMgr.h" />
+    <ClInclude Include="..\inc\StationOut.h" />
+    <ClInclude Include="..\inc\StationStmOut.h" />
+    <ClInclude Include="..\inc\SteadyOutModel.h" />
+    <ClInclude Include="..\inc\StmOutMgr.h" />
+    <ClInclude Include="..\inc\TranOutMgr.h" />
+    <ClInclude Include="..\inc\TransOutModel.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PFAResult.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

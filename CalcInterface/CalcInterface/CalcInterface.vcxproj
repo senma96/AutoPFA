@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{42156415-1DD3-4A39-BFC1-DB84E5954C3F}</ProjectGuid>
+    <RootNamespace>CalcInterface</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/CALCINTERFACE", XGCCAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/CalcInterface.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/CalcInterface.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Persistent.lib;CalcDriver.lib;APQuantity10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/CalcInterface.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/CalcInterface.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Lib/CalcInterface.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/CalcInterface.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/CalcInterface.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/CalcInterface.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Persistentd.lib;CalcDriverd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Libd\CalcInterfaced.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>D:\pfalib\Libd/CalcInterfaced.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Libd/CalcInterfaced.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/CalcInterface.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CalcAreaChangeFace.cpp" />
+    <ClCompile Include="..\src\CalcAssignFlowFace.cpp" />
+    <ClCompile Include="..\src\CalcAssignPressFace.cpp" />
+    <ClCompile Include="..\src\CalcBendFace.cpp" />
+    <ClCompile Include="..\src\CalcBranchFace.cpp" />
+    <ClCompile Include="..\src\CalcBreakerFace.cpp" />
+    <ClCompile Include="..\src\CalcCheckFace.cpp" />
+    <ClCompile Include="..\src\CalcControlFace.cpp" />
+    <ClCompile Include="..\src\CalcCurveFace.cpp" />
+    <ClCompile Include="..\src\CalcDeadEndFace.cpp" />
+    <ClCompile Include="..\src\CalcFileFace.cpp" />
+    <ClCompile Include="..\src\CalcFuildFace.cpp" />
+    <ClCompile Include="..\src\CalcGasAccumFace.cpp" />
+    <ClCompile Include="..\src\CalcGeneralFace.cpp" />
+    <ClCompile Include="..\src\CalcJunFace.cpp" />
+    <ClCompile Include="..\src\CalcJunFaceFactory.cpp" />
+    <ClCompile Include="..\src\CalcJunMgrFace.cpp" />
+    <ClCompile Include="..\src\CalcLiquidAccumFace.cpp" />
+    <ClCompile Include="..\src\CalcOrificeFace.cpp" />
+    <ClCompile Include="..\src\CalcPeriodicFace.cpp" />
+    <ClCompile Include="..\src\CalcPipeFace.cpp" />
+    <ClCompile Include="..\src\CalcPipeMgrFace.cpp" />
+    <ClCompile Include="..\src\CalcPumpConfigFace.cpp" />
+    <ClCompile Include="..\src\CalcPumpFace.cpp" />
+    <ClCompile Include="..\src\CalcReliefFace.cpp" />
+    <ClCompile Include="..\src\CalcReserviorFace.cpp" />
+    <ClCompile Include="..\src\CalcShortPipeFace.cpp" />
+    <ClCompile Include="..\src\CalcSprayFace.cpp" />
+    <ClCompile Include="..\src\CalcSteadyFace.cpp" />
+    <ClCompile Include="..\src\CalcSurgeFace.cpp" />
+    <ClCompile Include="..\src\CalcTeeWyeFace.cpp" />
+    <ClCompile Include="..\src\CalcTransDataFace.cpp" />
+    <ClCompile Include="..\src\CalcTransFace.cpp" />
+    <ClCompile Include="..\src\CalcTrigerFace.cpp" />
+    <ClCompile Include="..\src\CalcValveFace.cpp" />
+    <ClCompile Include="CalcInterface.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CalcInterface.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\CalcAreaChangeFace.h" />
+    <ClInclude Include="..\inc\CalcAssignFlowFace.h" />
+    <ClInclude Include="..\inc\CalcAssignPressFace.h" />
+    <ClInclude Include="..\inc\CalcBendFace.h" />
+    <ClInclude Include="..\inc\CalcBranchFace.h" />
+    <ClInclude Include="..\inc\CalcBreakerFace.h" />
+    <ClInclude Include="..\inc\CalcCheckFace.h" />
+    <ClInclude Include="..\inc\CalcControlFace.h" />
+    <ClInclude Include="..\inc\CalcCurveFace.h" />
+    <ClInclude Include="..\inc\CalcDeadEndFace.h" />
+    <ClInclude Include="..\inc\CalcFileFace.h" />
+    <ClInclude Include="..\inc\CalcFuildFace.h" />
+    <ClInclude Include="..\inc\CalcGasAccumFace.h" />
+    <ClInclude Include="..\inc\CalcGeneralFace.h" />
+    <ClInclude Include="..\inc\CalcJunFace.h" />
+    <ClInclude Include="..\inc\CalcJunFaceFactory.h" />
+    <ClInclude Include="..\inc\CalcJunMgrFace.h" />
+    <ClInclude Include="..\inc\CalcLiquidAccumFace.h" />
+    <ClInclude Include="..\inc\CalcOrificeFace.h" />
+    <ClInclude Include="..\inc\CalcPeriodicFace.h" />
+    <ClInclude Include="..\inc\CalcPipeFace.h" />
+    <ClInclude Include="..\inc\CalcPipeMgrFace.h" />
+    <ClInclude Include="..\inc\CalcPumpConfigFace.h" />
+    <ClInclude Include="..\inc\CalcPumpFace.h" />
+    <ClInclude Include="..\inc\CalcReliefFace.h" />
+    <ClInclude Include="..\inc\CalcReserviorFace.h" />
+    <ClInclude Include="..\inc\CalcShortPipeFace.h" />
+    <ClInclude Include="..\inc\CalcSprayFace.h" />
+    <ClInclude Include="..\inc\CalcSteadyFace.h" />
+    <ClInclude Include="..\inc\CalcSurgeFace.h" />
+    <ClInclude Include="..\inc\CalcTeeWyeFace.h" />
+    <ClInclude Include="..\inc\CalcTransDataFace.h" />
+    <ClInclude Include="..\inc\CalcTransFace.h" />
+    <ClInclude Include="..\inc\CalcTrigerFace.h" />
+    <ClInclude Include="..\inc\CalcValveFace.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CalcInterface.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

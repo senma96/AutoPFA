@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{207A2CF9-2EA5-4DEC-B1A6-41C89917CB40}</ProjectGuid>
+    <RootNamespace>AFTDriver</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/AFTDriver", FSKBAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(SolutionDir)..\Libd/AFTDriver.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;SHARE_AFTDRIVER_DATA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/AFTDriver.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(SolutionDir)..\Libd/AFTDriverd.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)..\Libd/AFTDriver.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>$(SolutionDir)..\Lib/AFTDriver.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;SHARE_AFTDRIVER_DATA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/AFTDriver.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(SolutionDir)..\Lib/AFTDriver.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>$(SolutionDir)..\Lib/AFTDriver.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(SolutionDir)..\Lib/AFTDriver.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)..\Lib/AFTDriver.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\AFTDriverMgr.cpp" />
+    <ClCompile Include="..\Src\Annotations.cpp" />
+    <ClCompile Include="..\Src\ArchiveInfo.cpp" />
+    <ClCompile Include="..\Src\ArchiveMsg.cpp" />
+    <ClCompile Include="..\Src\AreaChangeData.cpp" />
+    <ClCompile Include="..\Src\AssignFlowData.cpp" />
+    <ClCompile Include="..\Src\AssignPressData.cpp" />
+    <ClCompile Include="..\Src\BendData.cpp" />
+    <ClCompile Include="..\Src\BrachData.cpp" />
+    <ClCompile Include="..\Src\BreckerData.cpp" />
+    <ClCompile Include="..\Src\CheckValveData.cpp" />
+    <ClCompile Include="..\Src\ControlValveData.cpp" />
+    <ClCompile Include="..\Src\DeadEndData.cpp" />
+    <ClCompile Include="..\Src\FluidData.cpp" />
+    <ClCompile Include="..\Src\GasAccumData.cpp" />
+    <ClCompile Include="..\Src\GeneralData.cpp" />
+    <ClCompile Include="..\Src\GraphItem.cpp" />
+    <ClCompile Include="..\Src\GraphSet.cpp" />
+    <ClCompile Include="..\Src\Grourps.cpp" />
+    <ClCompile Include="..\Src\JunArchiveData.cpp" />
+    <ClCompile Include="..\Src\Junction.cpp" />
+    <ClCompile Include="..\Src\JunctionsMgr.cpp" />
+    <ClCompile Include="..\Src\JunDataFactory.cpp" />
+    <ClCompile Include="..\Src\JunTransData.cpp" />
+    <ClCompile Include="..\Src\LiquidAccumData.cpp" />
+    <ClCompile Include="..\Src\ModelDataRef.cpp" />
+    <ClCompile Include="..\Src\NetModelData.cpp" />
+    <ClCompile Include="..\Src\OutPutRef.cpp" />
+    <ClCompile Include="..\Src\OutPutRefItem.cpp" />
+    <ClCompile Include="..\Src\ParamRef.cpp" />
+    <ClCompile Include="..\Src\PersistentObj.cpp" />
+    <ClCompile Include="..\Src\PipeArchiveData.cpp" />
+    <ClCompile Include="..\Src\PipeData.cpp" />
+    <ClCompile Include="..\Src\PipesMgr.cpp" />
+    <ClCompile Include="..\Src\PrintFontRef.cpp" />
+    <ClCompile Include="..\Src\PumpConfig.cpp" />
+    <ClCompile Include="..\Src\PumpConfigData.cpp" />
+    <ClCompile Include="..\Src\PumpData.cpp" />
+    <ClCompile Include="..\Src\RawDataRef.cpp" />
+    <ClCompile Include="..\Src\RawDataSet.cpp" />
+    <ClCompile Include="..\Src\Refenrence.cpp" />
+    <ClCompile Include="..\Src\ReliefData.cpp" />
+    <ClCompile Include="..\Src\ReserviorData.cpp" />
+    <ClCompile Include="..\Src\Resourcedefine.cpp" />
+    <ClCompile Include="..\Src\RowObject.cpp" />
+    <ClCompile Include="..\Src\ScenarioDataMgr.cpp" />
+    <ClCompile Include="..\Src\ScenarioInfo.cpp" />
+    <ClCompile Include="..\Src\SectionData.cpp" />
+    <ClCompile Include="..\Src\SettingData.cpp" />
+    <ClCompile Include="..\Src\SprayData.cpp" />
+    <ClCompile Include="..\Src\SurgeData.cpp" />
+    <ClCompile Include="..\Src\TableBase.cpp" />
+    <ClCompile Include="..\Src\TeeWyeData.cpp" />
+    <ClCompile Include="..\Src\ToolBoxItem.cpp" />
+    <ClCompile Include="..\Src\ToolBoxRef.cpp" />
+    <ClCompile Include="..\Src\TranContorlData.cpp" />
+    <ClCompile Include="..\Src\UnitRef.cpp" />
+    <ClCompile Include="..\Src\ValveData.cpp" />
+    <ClCompile Include="..\Src\VersionInfo.cpp" />
+    <ClCompile Include="..\Src\VisualRefData.cpp" />
+    <ClCompile Include="..\Src\WorkSpace.cpp" />
+    <ClCompile Include="AFTDriver.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AFTDriver.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Inc\AFTDriverHeader.h" />
+    <ClInclude Include="..\Inc\AFTDriverMgr.h" />
+    <ClInclude Include="..\Inc\AFTDriverRes.h" />
+    <ClInclude Include="..\Inc\Annotations.h" />
+    <ClInclude Include="..\Inc\ArchiveInfo.h" />
+    <ClInclude Include="..\Inc\ArchiveMsg.h" />
+    <ClInclude Include="..\Inc\AreaChangeData.h" />
+    <ClInclude Include="..\Inc\AssignFlowData.h" />
+    <ClInclude Include="..\Inc\AssignPressData.h" />
+    <ClInclude Include="..\Inc\BendData.h" />
+    <ClInclude Include="..\Inc\BrachData.h" />
+    <ClInclude Include="..\Inc\BreckerData.h" />
+    <ClInclude Include="..\Inc\CheckValveData.h" />
+    <ClInclude Include="..\Inc\ControlValveData.h" />
+    <ClInclude Include="..\Inc\DeadEndData.h" />
+    <ClInclude Include="..\Inc\Factory.h" />
+    <ClInclude Include="..\Inc\FluidData.h" />
+    <ClInclude Include="..\Inc\GasAccumData.h" />
+    <ClInclude Include="..\Inc\GeneralData.h" />
+    <ClInclude Include="..\Inc\GraphItem.h" />
+    <ClInclude Include="..\Inc\GraphSet.h" />
+    <ClInclude Include="..\Inc\Grourps.h" />
+    <ClInclude Include="..\Inc\Iterator.h" />
+    <ClInclude Include="..\Inc\JunArchiveData.h" />
+    <ClInclude Include="..\Inc\Junction.h" />
+    <ClInclude Include="..\Inc\JunctionsMgr.h" />
+    <ClInclude Include="..\Inc\JunDataFactory.h" />
+    <ClInclude Include="..\Inc\JunTransData.h" />
+    <ClInclude Include="..\Inc\LiquidAccumData.h" />
+    <ClInclude Include="..\Inc\ListFlyWeightImp.h" />
+    <ClInclude Include="..\Inc\ModelDataRef.h" />
+    <ClInclude Include="..\Inc\NetModelData.h" />
+    <ClInclude Include="..\Inc\OutPutRef.h" />
+    <ClInclude Include="..\Inc\OutPutRefItem.h" />
+    <ClInclude Include="..\Inc\ParamRef.h" />
+    <ClInclude Include="..\Inc\PersistentObj.h" />
+    <ClInclude Include="..\Inc\PipeArchiveData.h" />
+    <ClInclude Include="..\Inc\PipeData.h" />
+    <ClInclude Include="..\Inc\PipesMgr.h" />
+    <ClInclude Include="..\Inc\PrintFontRef.h" />
+    <ClInclude Include="..\Inc\PumpConfig.h" />
+    <ClInclude Include="..\Inc\PumpConfigData.h" />
+    <ClInclude Include="..\Inc\PumpData.h" />
+    <ClInclude Include="..\Inc\RawDataRef.h" />
+    <ClInclude Include="..\Inc\RawDataSet.h" />
+    <ClInclude Include="..\Inc\RawDataTable.h" />
+    <ClInclude Include="..\Inc\Refenrence.h" />
+    <ClInclude Include="..\Inc\ReliefData.h" />
+    <ClInclude Include="..\Inc\ReserviorData.h" />
+    <ClInclude Include="..\Inc\Resourcedefine.h" />
+    <ClInclude Include="..\Inc\RowObject.h" />
+    <ClInclude Include="..\Inc\RowObjectFace.h" />
+    <ClInclude Include="..\Inc\ScenarioDataMgr.h" />
+    <ClInclude Include="..\Inc\ScenarioInfo.h" />
+    <ClInclude Include="..\Inc\SectionData.h" />
+    <ClInclude Include="..\Inc\SettingData.h" />
+    <ClInclude Include="..\Inc\ShareAFTDriver.h" />
+    <ClInclude Include="..\Inc\SprayData.h" />
+    <ClInclude Include="..\Inc\SurgeData.h" />
+    <ClInclude Include="..\Inc\TableBase.h" />
+    <ClInclude Include="..\Inc\TableData.h" />
+    <ClInclude Include="..\Inc\TeeWyeData.h" />
+    <ClInclude Include="..\Inc\ToolBoxItem.h" />
+    <ClInclude Include="..\Inc\ToolBoxRef.h" />
+    <ClInclude Include="..\Inc\TranContorlData.h" />
+    <ClInclude Include="..\Inc\UnitRef.h" />
+    <ClInclude Include="..\Inc\ValveData.h" />
+    <ClInclude Include="..\Inc\VersionInfo.h" />
+    <ClInclude Include="..\Inc\VisualRefData.h" />
+    <ClInclude Include="..\Inc\WorkSpace.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AFTDriver.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

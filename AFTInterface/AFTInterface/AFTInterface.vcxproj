@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{AAD28DBA-C20C-4FE3-A34C-7184F45673B4}</ProjectGuid>
+    <RootNamespace>AFTInterface</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/AFTINTERFACE", QHCCAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/AFTInterface.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/AFTInterface.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>AFTDriver.lib;Persistent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/AFTInterface.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/AFTInterface.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Lib/AFTInterface.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/AFTInterface.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/AFTInterface.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/AFTInterface.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007;$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>AFTDriverd.lib;Persistentd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)Libd\AFTInterfaced.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>D:\pfalib\Libd/AFTInterfaced.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>D:\pfalib\Libd/AFTInterfaced.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/AFTInterface.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\aftareachangeface.cpp" />
+    <ClCompile Include="..\Src\aftassignflowface.cpp" />
+    <ClCompile Include="..\Src\aftassignpressface.cpp" />
+    <ClCompile Include="..\Src\AFTBendFace.cpp" />
+    <ClCompile Include="..\Src\aftbranchface.cpp" />
+    <ClCompile Include="..\Src\aftbreakerface.cpp" />
+    <ClCompile Include="..\Src\aftcheckface.cpp" />
+    <ClCompile Include="..\Src\AFTConfigFace.cpp" />
+    <ClCompile Include="..\Src\AFTConfigItemFace.cpp" />
+    <ClCompile Include="..\Src\aftcontrolface.cpp" />
+    <ClCompile Include="..\Src\aftdeadendface.cpp" />
+    <ClCompile Include="..\Src\aftgasaccumface.cpp" />
+    <ClCompile Include="..\Src\aftgeneralface.cpp" />
+    <ClCompile Include="..\Src\aftjunface.cpp" />
+    <ClCompile Include="..\Src\aftjunmgr.cpp" />
+    <ClCompile Include="..\Src\aftliquidaccumface.cpp" />
+    <ClCompile Include="..\Src\aftnetmodel.cpp" />
+    <ClCompile Include="..\Src\AFTOutputRef.cpp" />
+    <ClCompile Include="..\Src\aftpipeface.cpp" />
+    <ClCompile Include="..\Src\aftpipemgr.cpp" />
+    <ClCompile Include="..\Src\aftpumpface.cpp" />
+    <ClCompile Include="..\Src\aftreliefface.cpp" />
+    <ClCompile Include="..\Src\aftreserviorface.cpp" />
+    <ClCompile Include="..\Src\aftscenariomgr.cpp" />
+    <ClCompile Include="..\Src\AFTSectionPipeFace.cpp" />
+    <ClCompile Include="..\Src\aftsprayface.cpp" />
+    <ClCompile Include="..\Src\AFTSteadyFace.cpp" />
+    <ClCompile Include="..\Src\aftsurgeface.cpp" />
+    <ClCompile Include="..\Src\aftsyspropety.cpp" />
+    <ClCompile Include="..\Src\aftteewyeface.cpp" />
+    <ClCompile Include="..\Src\AFTTransControlFace.cpp" />
+    <ClCompile Include="..\Src\AFTTransDataFace.cpp" />
+    <ClCompile Include="..\Src\AFTTwoDTableFace.cpp" />
+    <ClCompile Include="..\Src\aftvalveface.cpp" />
+    <ClCompile Include="..\Src\junfacefactory.cpp" />
+    <ClCompile Include="AFTInterface.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AFTInterface.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\inc\AFTAreaChangeFace.h" />
+    <ClInclude Include="..\inc\AFTAssignFlowFace.h" />
+    <ClInclude Include="..\inc\AFTAssignPressFace.h" />
+    <ClInclude Include="..\inc\AFTBendFace.h" />
+    <ClInclude Include="..\inc\AFTBranchFace.h" />
+    <ClInclude Include="..\inc\AFTBreakerFace.h" />
+    <ClInclude Include="..\inc\AFTCheckFace.h" />
+    <ClInclude Include="..\inc\AFTConfigFace.h" />
+    <ClInclude Include="..\inc\AFTConfigItemFace.h" />
+    <ClInclude Include="..\inc\AFTControlFace.h" />
+    <ClInclude Include="..\inc\AFTDeadEndFace.h" />
+    <ClInclude Include="..\inc\AFTGasAccumFace.h" />
+    <ClInclude Include="..\inc\AFTGeneralFace.h" />
+    <ClInclude Include="..\inc\AFTJunFace.h" />
+    <ClInclude Include="..\inc\AFTJunMgr.h" />
+    <ClInclude Include="..\inc\AFTLiquidAccumFace.h" />
+    <ClInclude Include="..\inc\AFTNetModel.h" />
+    <ClInclude Include="..\inc\AFTOutputRef.h" />
+    <ClInclude Include="..\inc\AFTPipeFace.h" />
+    <ClInclude Include="..\inc\AFTPipeMgr.h" />
+    <ClInclude Include="..\inc\AFTPumpFace.h" />
+    <ClInclude Include="..\inc\AFTReliefFace.h" />
+    <ClInclude Include="..\inc\AFTReserviorFace.h" />
+    <ClInclude Include="..\inc\AFTScenarioMgr.h" />
+    <ClInclude Include="..\inc\AFTSectionPipeFace.h" />
+    <ClInclude Include="..\inc\AFTSprayFace.h" />
+    <ClInclude Include="..\inc\AFTSteadyFace.h" />
+    <ClInclude Include="..\inc\AFTSurgeFace.h" />
+    <ClInclude Include="..\inc\AFTSysPropety.h" />
+    <ClInclude Include="..\inc\AFTTeeWyeFace.h" />
+    <ClInclude Include="..\inc\AFTTransControlFace.h" />
+    <ClInclude Include="..\inc\AFTTransDataFace.h" />
+    <ClInclude Include="..\inc\AFTTwoDTableFace.h" />
+    <ClInclude Include="..\inc\AFTValveFace.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AFTInterface.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{5A1BE5CC-2700-4638-BD58-353E10EE066A}</ProjectGuid>
+    <RootNamespace>AutoPFA</RootNamespace>
+    <SccProjectName>"$/AutoPFA1.1/AutoPFA", DSKBAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v145</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>D:\pfalib\Lib\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Libd/AutoPFA.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/AutoPFA.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Persistentd.lib;APQuantity10d.lib;USChartd.lib;MOCCacld.lib;CalcDriverd.lib;PFAResultd.lib;UnitSystemd.lib;DBTableDriverd.lib;InterfaceMgrd.lib;AFTInterfaced.lib;CalcInterfaced.lib;ImpulseDriverd.lib;HTMLHELP.LIB;AFTDriverd.lib;APGlobalShare10d.lib;GetPropertyofMaterial10d.lib;DataSource.lib;DataFormatDlgd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)Libd\AutoPFA.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(SolutionDir)Libd\AutoPFA.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Libd/AutoPFA.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>D:\pfalib\Lib/AutoPFA.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/AutoPFA.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Persistent.lib;USChart.lib;APQuantity10.lib;MOCCacl.lib;CalcDriver.lib;PFAResult.lib;UnitSystem.lib;DBTableDriver.lib;InterfaceMgr.lib;CalcInterface.lib;HTMLHELP.LIB;ImpulseDriver.lib;GetPropertyofMaterial10.lib;APGlobalShare10.lib;DataSource.lib;DataFormatDlg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\pfalib\Lib/AutoPFA.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>D:\pfalib\Lib/AutoPFA.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>D:\pfalib\Lib/AutoPFA.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AbruptContractionStrategy.cpp" />
+    <ClCompile Include="AbruptExpansionStrategy.cpp" />
+    <ClCompile Include="AreaChange.cpp" />
+    <ClCompile Include="AreaChangeLossCalc.cpp" />
+    <ClCompile Include="AreaChangeModel.cpp" />
+    <ClCompile Include="AssignedFlow.cpp" />
+    <ClCompile Include="AssignedPressure.cpp" />
+    <ClCompile Include="AssignFlowPage1.cpp" />
+    <ClCompile Include="AssignPressPage1.cpp" />
+    <ClCompile Include="AutoPFA.cpp" />
+    <ClCompile Include="AutoPFADoc.cpp" />
+    <ClCompile Include="AutoPFAView.cpp" />
+    <ClCompile Include="BaseDlg.cpp" />
+    <ClCompile Include="Bend.cpp" />
+    <ClCompile Include="Branch.cpp" />
+    <ClCompile Include="BranchPage1.cpp" />
+    <ClCompile Include="CalcManager.cpp" />
+    <ClCompile Include="checklistbox.cpp" />
+    <ClCompile Include="CheckValve.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CircularTunnel.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="ComponentFactory.cpp" />
+    <ClCompile Include="ComponentManager.cpp" />
+    <ClCompile Include="ComponentStatus.cpp" />
+    <ClCompile Include="Condition.cpp" />
+    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ConicalContraction45Strategy.cpp" />
+    <ClCompile Include="ConicalContraction90Strategy.cpp" />
+    <ClCompile Include="Conicalexpansion90Strategy.cpp" />
+    <ClCompile Include="ConicalExpansionStrategy.cpp" />
+    <ClCompile Include="ControlValve.cpp" />
+    <ClCompile Include="ControlWrapper.cpp" />
+    <ClCompile Include="CurveWrapper.cpp" />
+    <ClCompile Include="DeadEnd.cpp" />
+    <ClCompile Include="DlgAreaChange.cpp" />
+    <ClCompile Include="DlgAssignedFlow.cpp" />
+    <ClCompile Include="DlgAssigPress.cpp" />
+    <ClCompile Include="DlgBasisArea.cpp" />
+    <ClCompile Include="dlgbend.cpp" />
+    <ClCompile Include="DlgBranch.cpp" />
+    <ClCompile Include="DlgChangeUnit.cpp" />
+    <ClCompile Include="dlgchart.cpp" />
+    <ClCompile Include="DlgCheckList.cpp" />
+    <ClCompile Include="DlgCheckValve.cpp" />
+    <ClCompile Include="DlgColorFontRef.cpp" />
+    <ClCompile Include="DlgCommon.cpp" />
+    <ClCompile Include="DlgControlValve.cpp" />
+    <ClCompile Include="DlgCopyData.cpp" />
+    <ClCompile Include="DlgCScenarioManager.cpp" />
+    <ClCompile Include="DlgDeadEnd.cpp" />
+    <ClCompile Include="dlgdesignfactor.cpp" />
+    <ClCompile Include="DlgFind.cpp" />
+    <ClCompile Include="DlgGasAccum.cpp" />
+    <ClCompile Include="DlgGeneral.cpp" />
+    <ClCompile Include="DlgGeneralOutView.cpp" />
+    <ClCompile Include="DlgGeneralView.cpp" />
+    <ClCompile Include="DlgGenralCurve.cpp" />
+    <ClCompile Include="DlgGraphRef.cpp" />
+    <ClCompile Include="DlgInerailTrans.cpp" />
+    <ClCompile Include="DlgInitiation.cpp" />
+    <ClCompile Include="DlgInitPressGuess.cpp" />
+    <ClCompile Include="DlgInitPumpIneria.cpp" />
+    <ClCompile Include="DlgJun.cpp" />
+    <ClCompile Include="DlgJunOutView.cpp" />
+    <ClCompile Include="DlgJunView.cpp" />
+    <ClCompile Include="DlgLiquidAccum.cpp" />
+    <ClCompile Include="DlgNoInerialTrans.cpp" />
+    <ClCompile Include="DlgOneEle.cpp" />
+    <ClCompile Include="DlgOneEnd.cpp" />
+    <ClCompile Include="DlgOptCheckIn.cpp" />
+    <ClCompile Include="DlgOption.cpp" />
+    <ClCompile Include="DlgOptProGress.cpp" />
+    <ClCompile Include="DlgOutPutControl.cpp" />
+    <ClCompile Include="DlgParamTable.cpp" />
+    <ClCompile Include="DlgParamUnit.cpp" />
+    <ClCompile Include="dlgperiodic.cpp" />
+    <ClCompile Include="dlgpipemodel.cpp" />
+    <ClCompile Include="DlgPipeOutView.cpp" />
+    <ClCompile Include="DlgPipeView.cpp" />
+    <ClCompile Include="DlgPump.cpp" />
+    <ClCompile Include="dlgpumpconfig.cpp" />
+    <ClCompile Include="DlgPumpTranData.cpp" />
+    <ClCompile Include="DlgRawDataTable.cpp" />
+    <ClCompile Include="DlgReliefValve.cpp" />
+    <ClCompile Include="DlgReservoir.cpp" />
+    <ClCompile Include="DlgRestrictorModel.cpp" />
+    <ClCompile Include="DlgScenarioName.cpp" />
+    <ClCompile Include="dlgsectionpipe.cpp" />
+    <ClCompile Include="DlgSelGraphData.cpp" />
+    <ClCompile Include="DlgShortPipe.cpp" />
+    <ClCompile Include="DlgSprayDischarge.cpp" />
+    <ClCompile Include="dlgsteadyset.cpp" />
+    <ClCompile Include="DlgSurge.cpp" />
+    <ClCompile Include="DlgSysProperties.cpp" />
+    <ClCompile Include="dlgtabview.cpp" />
+    <ClCompile Include="DlgTarnsData.cpp" />
+    <ClCompile Include="DlgTeeWye.cpp" />
+    <ClCompile Include="DlgThreeTransSpecial.cpp" />
+    <ClCompile Include="dlgtolerance.cpp" />
+    <ClCompile Include="dlgtransientset.cpp" />
+    <ClCompile Include="dlgtransspecial.cpp" />
+    <ClCompile Include="DlgTwoEnd.cpp" />
+    <ClCompile Include="dlgtwotransspecial.cpp" />
+    <ClCompile Include="DlgUndefinedObjects.cpp" />
+    <ClCompile Include="DlgVacuumBreaker.cpp" />
+    <ClCompile Include="DlgValve.cpp" />
+    <ClCompile Include="DlgWorkspaceRef.cpp" />
+    <ClCompile Include="DrawJunTool.cpp" />
+    <ClCompile Include="DrawPipeTool.cpp" />
+    <ClCompile Include="FileDialogEx.cpp" />
+    <ClCompile Include="FilePreviewDlg.cpp" />
+    <ClCompile Include="FilePreviewDlgArea.cpp" />
+    <ClCompile Include="FlyWeight.cpp" />
+    <ClCompile Include="FlyWeightFactory.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="Fuild.cpp" />
+    <ClCompile Include="GasAccumulator.cpp" />
+    <ClCompile Include="GasPropertyWrapper.cpp" />
+    <ClCompile Include="General.cpp" />
+    <ClCompile Include="GlobalUse.cpp" />
+    <ClCompile Include="graphframe.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GraphView.cpp" />
+    <ClCompile Include="GridCell.cpp" />
+    <ClCompile Include="GridCellBase.cpp" />
+    <ClCompile Include="GridCtrl.cpp" />
+    <ClCompile Include="GridDropTarget.cpp" />
+    <ClCompile Include="ILossCalcStrategy.cpp" />
+    <ClCompile Include="InPlaceEdit.cpp" />
+    <ClCompile Include="ISupportStrategy.cpp" />
+    <ClCompile Include="Jun.cpp" />
+    <ClCompile Include="JunGraphics.cpp" />
+    <ClCompile Include="JunManipulator.cpp" />
+    <ClCompile Include="LiquidAccumulator.cpp" />
+    <ClCompile Include="LossCalcFactory.cpp" />
+    <ClCompile Include="MacroManipulator.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Manipulator.cpp" />
+    <ClCompile Include="MDIClientWnd.cpp" />
+    <ClCompile Include="MinimumSquareSum.cpp" />
+    <ClCompile Include="ModelDataFrame.cpp" />
+    <ClCompile Include="ModelDataView.cpp" />
+    <ClCompile Include="NetModel.cpp" />
+    <ClCompile Include="NoInerialModel.cpp" />
+    <ClCompile Include="NoTranFourquadInerialModel.cpp" />
+    <ClCompile Include="numedit.cpp" />
+    <ClCompile Include="NumFlyWeight.cpp" />
+    <ClCompile Include="OneWayWrapper.cpp" />
+    <ClCompile Include="OptContralTwo.cpp" />
+    <ClCompile Include="OptControl.cpp" />
+    <ClCompile Include="OptimitationConst.cpp" />
+    <ClCompile Include="OptimizationParameter.cpp" />
+    <ClCompile Include="OptionTypeNumWrapper.cpp" />
+    <ClCompile Include="OutPutDataFrame.cpp" />
+    <ClCompile Include="OutPutDataView.cpp" />
+    <ClCompile Include="PageAreaChangeData.cpp" />
+    <ClCompile Include="PageAreaChangeOption.cpp" />
+    <ClCompile Include="PageAssignedFlowData.cpp" />
+    <ClCompile Include="PageAssignedFlowOption.cpp" />
+    <ClCompile Include="PageAssignedFlowTrans.cpp" />
+    <ClCompile Include="PageAssignedPressOption.cpp" />
+    <ClCompile Include="pageassignedpresstrans.cpp" />
+    <ClCompile Include="PageAssignedPressureData.cpp" />
+    <ClCompile Include="PageBendData.cpp" />
+    <ClCompile Include="pagebendmodel.cpp" />
+    <ClCompile Include="PageBranchData.cpp" />
+    <ClCompile Include="PageBranchOption.cpp" />
+    <ClCompile Include="PageBranchTrans.cpp" />
+    <ClCompile Include="PageBreakerData.cpp" />
+    <ClCompile Include="PageBreakerModel.cpp" />
+    <ClCompile Include="PageBreakerOption.cpp" />
+    <ClCompile Include="pagechart.cpp" />
+    <ClCompile Include="PageCheck.cpp" />
+    <ClCompile Include="PageCheckModel.cpp" />
+    <ClCompile Include="PageCheckOption.cpp" />
+    <ClCompile Include="PageCheckTrans.cpp" />
+    <ClCompile Include="PageComponentTable.cpp" />
+    <ClCompile Include="PageCondition.cpp" />
+    <ClCompile Include="pageconfigdata.cpp" />
+    <ClCompile Include="PageConfiguration.cpp" />
+    <ClCompile Include="PageControlData.cpp" />
+    <ClCompile Include="PageControlModel.cpp" />
+    <ClCompile Include="PageControlOption.cpp" />
+    <ClCompile Include="PageControlTrans.cpp" />
+    <ClCompile Include="PageCurveData.cpp" />
+    <ClCompile Include="PageDataList.cpp" />
+    <ClCompile Include="PageDataTable.cpp" />
+    <ClCompile Include="PageDeadEndData.cpp" />
+    <ClCompile Include="PageDeadEndOption.cpp" />
+    <ClCompile Include="PageDetail.cpp" />
+    <ClCompile Include="PageFailTrans.cpp" />
+    <ClCompile Include="PageFitLoss.cpp" />
+    <ClCompile Include="pagefourquadtable.cpp" />
+    <ClCompile Include="PageFuild.cpp" />
+    <ClCompile Include="PageGasAccumData.cpp" />
+    <ClCompile Include="PageGasAccumModel.cpp" />
+    <ClCompile Include="PageGasAccumOption.cpp" />
+    <ClCompile Include="PageGeneral.cpp" />
+    <ClCompile Include="PageGeneralInfo.cpp" />
+    <ClCompile Include="PageGeneralModel.cpp" />
+    <ClCompile Include="PageGeneralOption.cpp" />
+    <ClCompile Include="PageGraph.cpp" />
+    <ClCompile Include="PageInertialData.cpp" />
+    <ClCompile Include="PageJunData.cpp" />
+    <ClCompile Include="PageJunGraph.cpp" />
+    <ClCompile Include="PageJunOutControl.cpp" />
+    <ClCompile Include="PageLiquidAccumData.cpp" />
+    <ClCompile Include="PageLiquidAccumModel.cpp" />
+    <ClCompile Include="PageLiquidAccumOption.cpp" />
+    <ClCompile Include="PageNotShowOutAtt.cpp" />
+    <ClCompile Include="PageOptCheckInPipeNet.cpp" />
+    <ClCompile Include="PageOther.cpp" />
+    <ClCompile Include="PageOutTable.cpp" />
+    <ClCompile Include="PagePipeData.cpp" />
+    <ClCompile Include="PagePipeGraph.cpp" />
+    <ClCompile Include="PagePipeOption.cpp" />
+    <ClCompile Include="PagePipeOutControl.cpp" />
+    <ClCompile Include="PagePumpData.cpp" />
+    <ClCompile Include="PagePumpModel.cpp" />
+    <ClCompile Include="PagePumpOption.cpp" />
+    <ClCompile Include="PagePumpTrans.cpp" />
+    <ClCompile Include="PageReliefData.cpp" />
+    <ClCompile Include="pagereliefmodel.cpp" />
+    <ClCompile Include="PageReliefOption.cpp" />
+    <ClCompile Include="PageReliefTrans.cpp" />
+    <ClCompile Include="PageReservoirData.cpp" />
+    <ClCompile Include="PageReservoirOption.cpp" />
+    <ClCompile Include="PageReservoirTrans.cpp" />
+    <ClCompile Include="PageSprayData.cpp" />
+    <ClCompile Include="PageSprayModel.cpp" />
+    <ClCompile Include="PageSprayOption.cpp" />
+    <ClCompile Include="PageSprayTrans.cpp" />
+    <ClCompile Include="PageStatus.cpp" />
+    <ClCompile Include="PageStmOutTable.cpp" />
+    <ClCompile Include="PageSummary.cpp" />
+    <ClCompile Include="PageSurgeData.cpp" />
+    <ClCompile Include="PageSurgeModel.cpp" />
+    <ClCompile Include="PageSurgeOption.cpp" />
+    <ClCompile Include="PageSurgeTrans.cpp" />
+    <ClCompile Include="PageTable.cpp" />
+    <ClCompile Include="PageTeeWyeData.cpp" />
+    <ClCompile Include="PageTeeWyeModel.cpp" />
+    <ClCompile Include="PageTeeWyeOption.cpp" />
+    <ClCompile Include="PageTolerance.cpp" />
+    <ClCompile Include="PageTranOutTable.cpp" />
+    <ClCompile Include="PageTrans.cpp" />
+    <ClCompile Include="PageTransientData.cpp" />
+    <ClCompile Include="pagetrantriger.cpp" />
+    <ClCompile Include="PageUnit.cpp" />
+    <ClCompile Include="PageValveData.cpp" />
+    <ClCompile Include="PageValveModel.cpp" />
+    <ClCompile Include="PageValveOption.cpp" />
+    <ClCompile Include="PageValveTrans.cpp" />
+    <ClCompile Include="PageVariableSpeed.cpp" />
+    <ClCompile Include="PageViscosModel.cpp" />
+    <ClCompile Include="palette.cpp" />
+    <ClCompile Include="PFAOptimitationData.cpp" />
+    <ClCompile Include="PFAOptimize.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="Pipe.cpp" />
+    <ClCompile Include="PipeDepthLoss.cpp" />
+    <ClCompile Include="PipeDirPage.cpp" />
+    <ClCompile Include="PipeGraphics.cpp" />
+    <ClCompile Include="PipeIDFlyWeight.cpp" />
+    <ClCompile Include="PipeManipulator.cpp" />
+    <ClCompile Include="PtFlyWeight.cpp" />
+    <ClCompile Include="Pump.cpp" />
+    <ClCompile Include="PumpTranModel.cpp" />
+    <ClCompile Include="PumpTransient.cpp" />
+    <ClCompile Include="ReliefValve.cpp" />
+    <ClCompile Include="ReserviorPage1.cpp" />
+    <ClCompile Include="Reservoir.cpp" />
+    <ClCompile Include="RestrictorWrapper.cpp" />
+    <ClCompile Include="ScenariManage.cpp" />
+    <ClCompile Include="Scenario.cpp" />
+    <ClCompile Include="ScenarioObject.cpp" />
+    <ClCompile Include="SectionSet.cpp" />
+    <ClCompile Include="ShortPipeWrapper.cpp" />
+    <ClCompile Include="SprayDischarge.cpp" />
+    <ClCompile Include="StartCADObj.cpp" />
+    <ClCompile Include="StartUpSpeedModel.cpp" />
+    <ClCompile Include="StateName.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SteadySet.cpp" />
+    <ClCompile Include="StratUpFourquadInerialModel.cpp" />
+    <ClCompile Include="StratUpInerialModel.cpp" />
+    <ClCompile Include="StrFlyWeight.cpp" />
+    <ClCompile Include="SupportStrategyFactory.cpp" />
+    <ClCompile Include="Surge.cpp" />
+    <ClCompile Include="SysProperFactory.cpp" />
+    <ClCompile Include="SysProperties.cpp" />
+    <ClCompile Include="TabSheet.cpp" />
+    <ClCompile Include="TeeWye.cpp" />
+    <ClCompile Include="ThickAnchorThroughoutStrategy.cpp" />
+    <ClCompile Include="ThickAnchorUpstreamStrategy.cpp" />
+    <ClCompile Include="ThickExpandThroughoutStrategy.cpp" />
+    <ClCompile Include="ThinAnchorThroughoutStrategy.cpp" />
+    <ClCompile Include="ThinAnchorUpstreamStrategy.cpp" />
+    <ClCompile Include="ThinExpandThroughoutStrategy.cpp" />
+    <ClCompile Include="TitleTip.cpp" />
+    <ClCompile Include="TranOutStepDlg.cpp" />
+    <ClCompile Include="Transient.cpp" />
+    <ClCompile Include="TransientSet.cpp" />
+    <ClCompile Include="TreeScenario.cpp" />
+    <ClCompile Include="TripFourquadInerialModel.cpp" />
+    <ClCompile Include="TripInerialModel.cpp" />
+    <ClCompile Include="UnitComboBox.cpp" />
+    <ClCompile Include="VacuumBreaker.cpp" />
+    <ClCompile Include="Valve.cpp" />
+    <ClCompile Include="WavespeedCalc.cpp" />
+    <ClCompile Include="WorkSpaceDataFrame.cpp" />
+    <ClCompile Include="WorkSpaceRef.cpp" />
+    <ClCompile Include="workspaceview.cpp" />
+    <ClCompile Include="ZoomManipulator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AutoPFA.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Persistent\inc\PipesManager.h" />
+    <ClInclude Include="AbruptContractionStrategy.h" />
+    <ClInclude Include="AbruptExpansionStrategy.h" />
+    <ClInclude Include="AreaChange.h" />
+    <ClInclude Include="AreaChangeLossCalc.h" />
+    <ClInclude Include="AreaChangeModel.h" />
+    <ClInclude Include="ArrayFlyWeight.h" />
+    <ClInclude Include="AssignedFlow.h" />
+    <ClInclude Include="AssignedPressure.h" />
+    <ClInclude Include="AssignFlowPage1.h" />
+    <ClInclude Include="AssignPressPage1.h" />
+    <ClInclude Include="AutoPFA.h" />
+    <ClInclude Include="AutoPFADoc.h" />
+    <ClInclude Include="AutoPFAView.h" />
+    <ClInclude Include="BaseDlg.h" />
+    <ClInclude Include="Bend.h" />
+    <ClInclude Include="Branch.h" />
+    <ClInclude Include="BranchPage1.h" />
+    <ClInclude Include="CalcManager.h" />
+    <ClInclude Include="CellRange.h" />
+    <ClInclude Include="checklistbox.h" />
+    <ClInclude Include="CheckValve.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CircularTunnel.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentFactory.h" />
+    <ClInclude Include="ComponentManager.h" />
+    <ClInclude Include="ComponentStatus.h" />
+    <ClInclude Include="Condition.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="ConicalContraction45Strategy.h" />
+    <ClInclude Include="ConicalContraction90Strategy.h" />
+    <ClInclude Include="Conicalexpansion90Strategy.h" />
+    <ClInclude Include="ConicalExpansionStrategy.h" />
+    <ClInclude Include="ControlValve.h" />
+    <ClInclude Include="ControlWrapper.h" />
+    <ClInclude Include="CurveWrapper.h" />
+    <ClInclude Include="DeadEnd.h" />
+    <ClInclude Include="DlgAreaChange.h" />
+    <ClInclude Include="DlgAssignedFlow.h" />
+    <ClInclude Include="DlgAssigPress.h" />
+    <ClInclude Include="DlgBasisArea.h" />
+    <ClInclude Include="dlgbend.h" />
+    <ClInclude Include="DlgBranch.h" />
+    <ClInclude Include="DlgChangeUnit.h" />
+    <ClInclude Include="dlgchart.h" />
+    <ClInclude Include="DlgCheckList.h" />
+    <ClInclude Include="DlgCheckValve.h" />
+    <ClInclude Include="DlgColorFontRef.h" />
+    <ClInclude Include="DlgCommon.h" />
+    <ClInclude Include="DlgControlValve.h" />
+    <ClInclude Include="DlgCopyData.h" />
+    <ClInclude Include="DlgCScenarioManager.h" />
+    <ClInclude Include="DlgDeadEnd.h" />
+    <ClInclude Include="dlgdesignfactor.h" />
+    <ClInclude Include="DlgFind.h" />
+    <ClInclude Include="DlgGasAccum.h" />
+    <ClInclude Include="DlgGeneral.h" />
+    <ClInclude Include="DlgGeneralOutView.h" />
+    <ClInclude Include="DlgGeneralView.h" />
+    <ClInclude Include="DlgGenralCurve.h" />
+    <ClInclude Include="DlgGraphRef.h" />
+    <ClInclude Include="DlgInerailTrans.h" />
+    <ClInclude Include="DlgInitiation.h" />
+    <ClInclude Include="dlginitpressguess.h" />
+    <ClInclude Include="DlgInitPumpIneria.h" />
+    <ClInclude Include="DlgJun.h" />
+    <ClInclude Include="DlgJunOutView.h" />
+    <ClInclude Include="DlgJunView.h" />
+    <ClInclude Include="DlgLiquidAccum.h" />
+    <ClInclude Include="DlgNoInerialTrans.h" />
+    <ClInclude Include="DlgOneEle.h" />
+    <ClInclude Include="DlgOneEnd.h" />
+    <ClInclude Include="DlgOptCheckIn.h" />
+    <ClInclude Include="dlgoption.h" />
+    <ClInclude Include="DlgOptProGress.h" />
+    <ClInclude Include="DlgOutPutControl.h" />
+    <ClInclude Include="DlgParamTable.h" />
+    <ClInclude Include="dlgparamunit.h" />
+    <ClInclude Include="dlgperiodic.h" />
+    <ClInclude Include="dlgpipemodel.h" />
+    <ClInclude Include="DlgPipeOutView.h" />
+    <ClInclude Include="DlgPipeView.h" />
+    <ClInclude Include="DlgPump.h" />
+    <ClInclude Include="dlgpumpconfig.h" />
+    <ClInclude Include="DlgPumpTranData.h" />
+    <ClInclude Include="DlgRawDataTable.h" />
+    <ClInclude Include="DlgReliefValve.h" />
+    <ClInclude Include="DlgReservoir.h" />
+    <ClInclude Include="DlgRestrictorModel.h" />
+    <ClInclude Include="DlgScenarioName.h" />
+    <ClInclude Include="dlgsectionpipe.h" />
+    <ClInclude Include="DlgSelGraphData.h" />
+    <ClInclude Include="DlgShortPipe.h" />
+    <ClInclude Include="DlgSprayDischarge.h" />
+    <ClInclude Include="dlgsteadyset.h" />
+    <ClInclude Include="DlgSurge.h" />
+    <ClInclude Include="DlgSysProperties.h" />
+    <ClInclude Include="dlgtabview.h" />
+    <ClInclude Include="DlgTarnsData.h" />
+    <ClInclude Include="DlgTeeWye.h" />
+    <ClInclude Include="DlgThreeTransSpecial.h" />
+    <ClInclude Include="dlgtolerance.h" />
+    <ClInclude Include="dlgtransientset.h" />
+    <ClInclude Include="dlgtransspecial.h" />
+    <ClInclude Include="DlgTwoEnd.h" />
+    <ClInclude Include="dlgtwotransspecial.h" />
+    <ClInclude Include="DlgUndefinedObjects.h" />
+    <ClInclude Include="DlgVacuumBreaker.h" />
+    <ClInclude Include="DlgValve.h" />
+    <ClInclude Include="DlgWorkspaceRef.h" />
+    <ClInclude Include="DrawJunTool.h" />
+    <ClInclude Include="DrawPipeTool.h" />
+    <ClInclude Include="FileDialogEx.h" />
+    <ClInclude Include="FilePreviewDlg.h" />
+    <ClInclude Include="FilePreviewDlgArea.h" />
+    <ClInclude Include="FlyWeight.h" />
+    <ClInclude Include="FlyWeightFactory.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="Fuild.h" />
+    <ClInclude Include="GasAccumulator.h" />
+    <ClInclude Include="GasPropertyWrapper.h" />
+    <ClInclude Include="General.h" />
+    <ClInclude Include="GlobalUse.h" />
+    <ClInclude Include="graphframe.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GraphView.h" />
+    <ClInclude Include="GridCell.h" />
+    <ClInclude Include="GridCellBase.h" />
+    <ClInclude Include="GridCtrl.h" />
+    <ClInclude Include="GridDropTarget.h" />
+    <ClInclude Include="htmlhelp.h" />
+    <ClInclude Include="ILossCalcStrategy.h" />
+    <ClInclude Include="InPlaceEdit.h" />
+    <ClInclude Include="ISupportStrategy.h" />
+    <ClInclude Include="Jun.h" />
+    <ClInclude Include="JunGraphics.h" />
+    <ClInclude Include="JunManipulator.h" />
+    <ClInclude Include="LiquidAccumulator.h" />
+    <ClInclude Include="LossCalcFactory.h" />
+    <ClInclude Include="MacroManipulator.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Manipulator.h" />
+    <ClInclude Include="MDIClientWnd.h" />
+    <ClInclude Include="MemDC.h" />
+    <ClInclude Include="MinimumSquareSum.h" />
+    <ClInclude Include="ModelDataFrame.h" />
+    <ClInclude Include="ModelDataView.h" />
+    <ClInclude Include="NetModel.h" />
+    <ClInclude Include="NoInerialModel.h" />
+    <ClInclude Include="NoTranFourquadInerialModel.h" />
+    <ClInclude Include="numedit.h" />
+    <ClInclude Include="NumFlyWeight.h" />
+    <ClInclude Include="OneWayWrapper.h" />
+    <ClInclude Include="OptContralOne.h" />
+    <ClInclude Include="OptContralTwo.h" />
+    <ClInclude Include="OptControl.h" />
+    <ClInclude Include="OptimitationConst.h" />
+    <ClInclude Include="OptimizationParameter.h" />
+    <ClInclude Include="OptionTypeNumWrapper.h" />
+    <ClInclude Include="OutPutDataFrame.h" />
+    <ClInclude Include="OutPutDataView.h" />
+    <ClInclude Include="PageAreaChangeData.h" />
+    <ClInclude Include="pageareachangeoption.h" />
+    <ClInclude Include="PageAssignedFlowData.h" />
+    <ClInclude Include="pageassignedflowoption.h" />
+    <ClInclude Include="PageAssignedFlowTrans.h" />
+    <ClInclude Include="PageAssignedPressOption.h" />
+    <ClInclude Include="pageassignedpresstrans.h" />
+    <ClInclude Include="PageAssignedPressureData.h" />
+    <ClInclude Include="PageBendData.h" />
+    <ClInclude Include="pagebendmodel.h" />
+    <ClInclude Include="PageBranchData.h" />
+    <ClInclude Include="PageBranchOption.h" />
+    <ClInclude Include="PageBranchTrans.h" />
+    <ClInclude Include="PageBreakerData.h" />
+    <ClInclude Include="pagebreakermodel.h" />
+    <ClInclude Include="PageBreakerOption.h" />
+    <ClInclude Include="pagechart.h" />
+    <ClInclude Include="PageCheck.h" />
+    <ClInclude Include="pagecheckmodel.h" />
+    <ClInclude Include="PageCheckOption.h" />
+    <ClInclude Include="PageCheckTrans.h" />
+    <ClInclude Include="PageComponentTable.h" />
+    <ClInclude Include="PageCondition.h" />
+    <ClInclude Include="pageconfigdata.h" />
+    <ClInclude Include="PageConfiguration.h" />
+    <ClInclude Include="PageControlData.h" />
+    <ClInclude Include="PageControlModel.h" />
+    <ClInclude Include="PageControlOption.h" />
+    <ClInclude Include="PageControlTrans.h" />
+    <ClInclude Include="PageCurveData.h" />
+    <ClInclude Include="PageDataList.h" />
+    <ClInclude Include="PageDataTable.h" />
+    <ClInclude Include="PageDeadEndData.h" />
+    <ClInclude Include="PageDeadEndOption.h" />
+    <ClInclude Include="PageDetail.h" />
+    <ClInclude Include="PageFailTrans.h" />
+    <ClInclude Include="PageFitLoss.h" />
+    <ClInclude Include="pagefourquadtable.h" />
+    <ClInclude Include="PageFuild.h" />
+    <ClInclude Include="PageGasAccumData.h" />
+    <ClInclude Include="PageGasAccumModel.h" />
+    <ClInclude Include="PageGasAccumOption.h" />
+    <ClInclude Include="PageGeneral.h" />
+    <ClInclude Include="PageGeneralInfo.h" />
+    <ClInclude Include="pagegeneralmodel.h" />
+    <ClInclude Include="PageGeneralOption.h" />
+    <ClInclude Include="PageGraph.h" />
+    <ClInclude Include="PageInertialData.h" />
+    <ClInclude Include="PageJunData.h" />
+    <ClInclude Include="PageJunGraph.h" />
+    <ClInclude Include="PageJunOutControl.h" />
+    <ClInclude Include="PageLiquidAccumData.h" />
+    <ClInclude Include="pageliquidaccummodel.h" />
+    <ClInclude Include="PageLiquidAccumOption.h" />
+    <ClInclude Include="PageNotShowOutAtt.h" />
+    <ClInclude Include="PageOptCheckInPipeNet.h" />
+    <ClInclude Include="PageOther.h" />
+    <ClInclude Include="PageOutTable.h" />
+    <ClInclude Include="PagePipeData.h" />
+    <ClInclude Include="PagePipeGraph.h" />
+    <ClInclude Include="PagePipeOption.h" />
+    <ClInclude Include="PagePipeOutControl.h" />
+    <ClInclude Include="PagePumpData.h" />
+    <ClInclude Include="PagePumpModel.h" />
+    <ClInclude Include="PagePumpOption.h" />
+    <ClInclude Include="PagePumpTrans.h" />
+    <ClInclude Include="PageReliefData.h" />
+    <ClInclude Include="pagereliefmodel.h" />
+    <ClInclude Include="PageReliefOption.h" />
+    <ClInclude Include="PageReliefTrans.h" />
+    <ClInclude Include="PageReservoirData.h" />
+    <ClInclude Include="PageReservoirOption.h" />
+    <ClInclude Include="PageReservoirTrans.h" />
+    <ClInclude Include="PageSprayData.h" />
+    <ClInclude Include="PageSprayModel.h" />
+    <ClInclude Include="PageSprayOption.h" />
+    <ClInclude Include="PageSprayTrans.h" />
+    <ClInclude Include="PageStatus.h" />
+    <ClInclude Include="PageStmOutTable.h" />
+    <ClInclude Include="PageSummary.h" />
+    <ClInclude Include="PageSurgeData.h" />
+    <ClInclude Include="pagesurgemodel.h" />
+    <ClInclude Include="PageSurgeOption.h" />
+    <ClInclude Include="PageSurgeTrans.h" />
+    <ClInclude Include="PageTable.h" />
+    <ClInclude Include="PageTeeWyeData.h" />
+    <ClInclude Include="pageteewyemodel.h" />
+    <ClInclude Include="PageTeeWyeOption.h" />
+    <ClInclude Include="PageTolerance.h" />
+    <ClInclude Include="PageTranOutTable.h" />
+    <ClInclude Include="PageTrans.h" />
+    <ClInclude Include="PageTransientData.h" />
+    <ClInclude Include="pagetrantriger.h" />
+    <ClInclude Include="PageUnit.h" />
+    <ClInclude Include="PageValveData.h" />
+    <ClInclude Include="PageValveModel.h" />
+    <ClInclude Include="PageValveOption.h" />
+    <ClInclude Include="PageValveTrans.h" />
+    <ClInclude Include="PageVariableSpeed.h" />
+    <ClInclude Include="PageViscosModel.h" />
+    <ClInclude Include="palette.h" />
+    <ClInclude Include="PFAOptimitationData.h" />
+    <ClInclude Include="PFAOptimize.h" />
+    <ClInclude Include="picture.h" />
+    <ClInclude Include="Pipe.h" />
+    <ClInclude Include="PipeDepthLoss.h" />
+    <ClInclude Include="PipeDirPage.h" />
+    <ClInclude Include="PipeGraphics.h" />
+    <ClInclude Include="PipeIDFlyWeight.h" />
+    <ClInclude Include="PipeManipulator.h" />
+    <ClInclude Include="PtFlyWeight.h" />
+    <ClInclude Include="Pump.h" />
+    <ClInclude Include="PumpTranModel.h" />
+    <ClInclude Include="PumpTransient.h" />
+    <ClInclude Include="ReliefValve.h" />
+    <ClInclude Include="ReserviorPage1.h" />
+    <ClInclude Include="Reservoir.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RestrictorWrapper.h" />
+    <ClInclude Include="ScenariManage.h" />
+    <ClInclude Include="Scenario.h" />
+    <ClInclude Include="ScenarioObject.h" />
+    <ClInclude Include="SectionSet.h" />
+    <ClInclude Include="ShortPipeWrapper.h" />
+    <ClInclude Include="SprayDischarge.h" />
+    <ClInclude Include="StartCADObj.h" />
+    <ClInclude Include="StartUpSpeedModel.h" />
+    <ClInclude Include="StateName.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SteadySet.h" />
+    <ClInclude Include="StratUpFourquadInerialModel.h" />
+    <ClInclude Include="StratUpInerialModel.h" />
+    <ClInclude Include="StrFlyWeight.h" />
+    <ClInclude Include="SupportStrategyFactory.h" />
+    <ClInclude Include="Surge.h" />
+    <ClInclude Include="SysProperFactory.h" />
+    <ClInclude Include="SysProperties.h" />
+    <ClInclude Include="TableFlyWeigh.h" />
+    <ClInclude Include="TabSheet.h" />
+    <ClInclude Include="TeeWye.h" />
+    <ClInclude Include="ThickAnchorThroughoutStrategy.h" />
+    <ClInclude Include="ThickAnchorUpstreamStrategy.h" />
+    <ClInclude Include="ThickExpandThroughoutStrategy.h" />
+    <ClInclude Include="ThinAnchorThroughoutStrategy.h" />
+    <ClInclude Include="ThinAnchorUpstreamStrategy.h" />
+    <ClInclude Include="ThinExpandThroughoutStrategy.h" />
+    <ClInclude Include="TitleTip.h" />
+    <ClInclude Include="TranOutStepDlg.h" />
+    <ClInclude Include="TransDataTable.h" />
+    <ClInclude Include="Transient.h" />
+    <ClInclude Include="TransientSet.h" />
+    <ClInclude Include="TreeScenario.h" />
+    <ClInclude Include="TripFourquadInerialModel.h" />
+    <ClInclude Include="TripInerialModel.h" />
+    <ClInclude Include="UnitComboBox.h" />
+    <ClInclude Include="VacuumBreaker.h" />
+    <ClInclude Include="Valve.h" />
+    <ClInclude Include="WavespeedCalc.h" />
+    <ClInclude Include="WorkSpaceDataFrame.h" />
+    <ClInclude Include="WorkSpaceRef.h" />
+    <ClInclude Include="workspaceview.h" />
+    <ClInclude Include="ZoomManipulator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="mdi.ico" />
+    <Image Include="res\angel1.bmp" />
+    <Image Include="res\angel21.bmp" />
+    <Image Include="res\AutoPFA.ico" />
+    <Image Include="res\AutoPFADoc.ico" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap10.bmp" />
+    <Image Include="res\bitmap11.bmp" />
+    <Image Include="res\bitmap12.bmp" />
+    <Image Include="res\bitmap13.bmp" />
+    <Image Include="res\bitmap14.bmp" />
+    <Image Include="res\bitmap15.bmp" />
+    <Image Include="res\bitmap16.bmp" />
+    <Image Include="res\bitmap17.bmp" />
+    <Image Include="res\bitmap18.bmp" />
+    <Image Include="res\bitmap19.bmp" />
+    <Image Include="res\bitmap2.bmp" />
+    <Image Include="res\bitmap20.bmp" />
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bitmap4.bmp" />
+    <Image Include="res\bitmap5.bmp" />
+    <Image Include="res\bitmap6.bmp" />
+    <Image Include="res\bitmap7.bmp" />
+    <Image Include="res\bitmap8.bmp" />
+    <Image Include="res\bitmap9.bmp" />
+    <Image Include="res\bitmapel.bmp" />
+    <Image Include="res\bitmapmi.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00006.bmp" />
+    <Image Include="res\bmp00007.bmp" />
+    <Image Include="res\bmp00008.bmp" />
+    <Image Include="res\bmp00009.bmp" />
+    <Image Include="res\bmp00010.bmp" />
+    <Image Include="res\bmp00011.bmp" />
+    <Image Include="res\bmp00012.bmp" />
+    <Image Include="res\bmp00013.bmp" />
+    <Image Include="res\btmapnext.bmp" />
+    <Image Include="res\btmappre.bmp" />
+    <Image Include="res\graphbar.bmp" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\palette.bmp" />
+    <Image Include="res\Prairie Wind.bmp" />
+    <Image Include="res\resvior25.bmp" />
+    <Image Include="res\resvior50.bmp" />
+    <Image Include="res\resvior75.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\uesoftci.bmp" />
+    <Image Include="res\水头损失公式.bmp" />
+    <Image Include="res\管道单位长度公式.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\AutoPFA.rc2" />
+    <None Include="res\cur00003.cur" />
+    <None Include="res\cursor10.cur" />
+    <None Include="res\cursor11.cur" />
+    <None Include="res\cursor12.cur" />
+    <None Include="res\cursor13.cur" />
+    <None Include="res\cursor14.cur" />
+    <None Include="res\cursor15.cur" />
+    <None Include="res\cursor16.cur" />
+    <None Include="res\cursor17.cur" />
+    <None Include="res\cursor18.cur" />
+    <None Include="res\cursor19.cur" />
+    <None Include="res\cursor2.cur" />
+    <None Include="res\cursor20.cur" />
+    <None Include="res\cursor3.cur" />
+    <None Include="res\cursor4.cur" />
+    <None Include="res\cursor5.cur" />
+    <None Include="res\cursor6.cur" />
+    <None Include="res\cursor7.cur" />
+    <None Include="res\cursor8.cur" />
+    <None Include="res\cursor9.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="AutoPFA.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="AutoPFA.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

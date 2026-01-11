@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0b90c5db-ed50-4dcb-89ca-8452a18ed61a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7b8a25a1-d0ad-4e1e-9300-5f0b059e8977}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{dc8a56c2-19bf-4ffd-8d9b-a0e96305e7c7}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{a0d0cece-b097-44e7-abef-8833cc84afa7}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{8935aea4-3b2f-4d53-80e0-39308c2cb3fc}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{319f4997-4b86-4b9a-95bd-94967560a229}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="APQuantity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\QuantityManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\QuantityPersist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\QuantitySystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\UnitPFA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\angletrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\areatrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\DefaultUnitSetting.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\densitytrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\ExpansionCoefTrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\forcetrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\lengthtrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\masstrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\MomentTrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\powertrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\pressuretrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\QuantityPFA.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\RigidityTrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\RSFTrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\speedtrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\temperaturetrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\timetrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\volumntrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\worktrans.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="APQuantity.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Inc\QuantityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\QuantityPersist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\QuantitySystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\UnitPFA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\angletrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\APQuantityresource.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\areatrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\DefaultUnitSetting.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\densitytrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\dimensiontype.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\ExpansionCoefTrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\forcetrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\lengthtrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\masstrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\MomentTrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\PFAQheader.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\powertrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\pressuretrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\quantity.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\Quantity_share.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\QuantityPFA.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\result.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\RigidityTrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\RSFTrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\speedtrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\temperaturetrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\timetrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\unit.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\unithead.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\UnitString.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\volumntrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Inc\worktrans.h">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\APQuantity.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
