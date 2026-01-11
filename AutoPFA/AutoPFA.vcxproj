@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -49,12 +49,13 @@
     <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <OutDir>$(SolutionDir)..\Libd\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>D:\pfalib\Lib\</OutDir>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -64,7 +65,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>D:\pfalib\Libd/AutoPFA.tlb</TypeLibraryName>
+      <TypeLibraryName>$(SolutionDir)..\Libd\/AutoPFA.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -84,24 +85,27 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>Persistentd.lib;APQuantity10d.lib;USChartd.lib;MOCCacld.lib;CalcDriverd.lib;PFAResultd.lib;UnitSystemd.lib;DBTableDriverd.lib;InterfaceMgrd.lib;AFTInterfaced.lib;CalcInterfaced.lib;ImpulseDriverd.lib;HTMLHELP.LIB;AFTDriverd.lib;APGlobalShare10d.lib;GetPropertyofMaterial10d.lib;DataSource.lib;DataFormatDlgd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)Libd\AutoPFA.exe</OutputFile>
+      <AdditionalDependencies>Persistentd.lib;APQuantityd.lib;USChartd.lib;MOCCacld.lib;CalcDriverd.lib;PFAResultd.lib;UnitSystemd.lib;DBTableDriverd.lib;InterfaceMgrd.lib;AFTInterfaced.lib;CalcInterfaced.lib;ImpulseDriverd.lib;HTMLHELP.LIB;AFTDriverd.lib;DataSource.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(SolutionDir)..\Libd\$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(SolutionDir)Libd\AutoPFA.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libd;$(SolutionDir)Libd;C:\ObjectARX 2007\lib</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>D:\pfalib\Libd/AutoPFA.bsc</OutputFile>
+      <OutputFile>$(SolutionDir)..\Libd\/AutoPFA.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,7 +114,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>D:\pfalib\Lib/AutoPFA.tlb</TypeLibraryName>
+      <TypeLibraryName>$(SolutionDir)..\Lib\/AutoPFA.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -129,22 +133,25 @@
       <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Persistent.lib;USChart.lib;APQuantity10.lib;MOCCacl.lib;CalcDriver.lib;PFAResult.lib;UnitSystem.lib;DBTableDriver.lib;InterfaceMgr.lib;CalcInterface.lib;HTMLHELP.LIB;ImpulseDriver.lib;GetPropertyofMaterial10.lib;APGlobalShare10.lib;DataSource.lib;DataFormatDlg.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>D:\pfalib\Lib/AutoPFA.exe</OutputFile>
+      <OutputFile>$(SolutionDir)..\Lib\/AutoPFA.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>D:\pfalib\Lib/AutoPFA.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)..\Lib\/AutoPFA.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>D:\pfalib\Lib/AutoPFA.bsc</OutputFile>
+      <OutputFile>$(SolutionDir)..\Lib\/AutoPFA.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

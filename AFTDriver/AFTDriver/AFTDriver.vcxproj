@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -52,6 +52,7 @@
     <OutDir>$(SolutionDir)..\Libd\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)..\Lib\</OutDir>
@@ -118,7 +119,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;SHARE_AFTDRIVER_DATA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -136,6 +137,7 @@
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <OutputFile>$(SolutionDir)..\Lib/AFTDriver.dll</OutputFile>
@@ -144,6 +146,7 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(SolutionDir)..\Lib/AFTDriver.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>

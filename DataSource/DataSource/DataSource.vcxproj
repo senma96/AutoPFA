@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -49,14 +49,15 @@
     <_ProjectFileVersion>18.0.11312.151</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>d:\pfalib\lib\</OutDir>
+    <OutDir>$(SolutionDir)..\Lib\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)Libd\</OutDir>
+    <OutDir>$(SolutionDir)..\Libd\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
@@ -64,7 +65,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>d:\pfalib\lib/DataSource.tlb</TypeLibraryName>
+      <TypeLibraryName>$(SolutionDir)..\Lib\/DataSource.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -82,22 +83,25 @@
       <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>d:\pfalib\lib/DataSource.dll</OutputFile>
+      <OutputFile>$(SolutionDir)..\Lib\/DataSource.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ProgramDatabaseFile>d:\pfalib\lib/DataSource.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)..\Lib\/DataSource.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>d:\pfalib\lib/DataSource.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)..\Lib\/DataSource.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>d:\pfalib\lib/DataSource.bsc</OutputFile>
+      <OutputFile>$(SolutionDir)..\Lib\/DataSource.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -106,7 +110,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>D:\pfalib\Libd/DataSource.tlb</TypeLibraryName>
+      <TypeLibraryName>$(SolutionDir)..\Libd\/DataSource.tlb</TypeLibraryName>
       <HeaderFileName />
     </Midl>
     <ClCompile>
@@ -125,24 +129,26 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(SolutionDir)AFTDriver\Inc;$(SolutionDir)AFTInterface\inc;$(SolutionDir)APQuantity\Inc;$(SolutionDir)CalcDriver\inc;$(SolutionDir)CalcInterface\inc;$(SolutionDir)DataSource\INC;$(SolutionDir)DBTableDriver\inc;$(SolutionDir)ImpulseDriver\inc;$(SolutionDir)InterfaceMgr\inc;$(SolutionDir)MocCalc\inc;$(SolutionDir)PCFDriver\inc;$(SolutionDir)PCFInterface\inc;$(SolutionDir)Persistent\Inc;$(SolutionDir)PFAResult\inc;$(SolutionDir)UnitSystem\INC;$(SolutionDir)USChart\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32;$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\AFTDriver\Inc;$(SolutionDir)..\AFTInterface\inc;$(SolutionDir)..\APQuantity\Inc;$(SolutionDir)..\CalcDriver\inc;$(SolutionDir)..\CalcInterface\inc;$(SolutionDir)..\DataSource\INC;$(SolutionDir)..\DBTableDriver\inc;$(SolutionDir)..\ImpulseDriver\inc;$(SolutionDir)..\InterfaceMgr\inc;$(SolutionDir)..\MocCalc\inc;$(SolutionDir)..\PCFDriver\inc;$(SolutionDir)..\PCFInterface\inc;$(SolutionDir)..\Persistent\Inc;$(SolutionDir)..\PFAResult\inc;$(SolutionDir)..\UnitSystem\INC;$(SolutionDir)..\USChart\inc;C:\ObjectARX 2007\inc;C:\ObjectARX 2007\inc-win32</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <OutputFile>D:\pfalib\Libd/DataSource.dll</OutputFile>
+      <OutputFile>$(SolutionDir)..\Libd\/DataSource.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>D:\pfalib\Libd/DataSource.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(SolutionDir)..\Libd\/DataSource.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>D:\pfalib\Libd/DataSource.lib</ImportLibrary>
+      <ImportLibrary>$(SolutionDir)..\Libd\/DataSource.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\ObjectARX 2007\lib-win32</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>D:\pfalib\Libd/DataSource.bsc</OutputFile>
+      <OutputFile>$(SolutionDir)..\Libd\/DataSource.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
